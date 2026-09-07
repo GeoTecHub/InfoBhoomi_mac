@@ -1,0 +1,287 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Paper figures</title>
+<style>body{margin:0;background:#f6f6f4;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:28px}
+h1{font-size:20px;margin:0 0 6px;color:#111827}p.sub{margin:0 0 28px;color:#6b7280;font-size:14px}
+figure{margin:0 0 34px;background:#fff;border:1px solid #e2e5ea;border-radius:8px;padding:18px}
+figcaption{font-size:13px;font-weight:700;color:#111827;margin-bottom:12px}
+svg{width:100%;height:auto;display:block}</style></head><body>
+<h1>Methodology figures</h1><p class="sub">How Much of a Legal Volume Survives? &mdash; Section 3</p>
+<figure><figcaption>Figure 1 — Measurement architecture</figcaption><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="1000" height="520" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1f2937"/>
+    </marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0d6e63"/>
+    </marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9a3412"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="520" fill="#ffffff"/>
+
+  <!-- forward chain -->
+  <g>
+    <rect x="40"  y="70" width="170" height="66" rx="5" fill="#f1f5f4" stroke="#1f2937" stroke-width="1.3"/>
+    <text x="125" y="97"  text-anchor="middle" font-size="15" font-weight="bold" fill="#111827">S0 · IFC</text>
+    <text x="125" y="118" text-anchor="middle" font-size="12" fill="#4b5563">source building model</text>
+
+    <rect x="290" y="70" width="170" height="66" rx="5" fill="#f1f5f4" stroke="#1f2937" stroke-width="1.3"/>
+    <text x="375" y="97"  text-anchor="middle" font-size="15" font-weight="bold" fill="#111827">S1 · CityJSON</text>
+    <text x="375" y="118" text-anchor="middle" font-size="12" fill="#4b5563">after conversion</text>
+
+    <rect x="540" y="70" width="170" height="66" rx="5" fill="#f1f5f4" stroke="#1f2937" stroke-width="1.3"/>
+    <text x="625" y="97"  text-anchor="middle" font-size="15" font-weight="bold" fill="#111827">S2 · PostGIS</text>
+    <text x="625" y="118" text-anchor="middle" font-size="12" fill="#4b5563">as stored</text>
+
+    <rect x="790" y="70" width="170" height="66" rx="5" fill="#f1f5f4" stroke="#1f2937" stroke-width="1.3"/>
+    <text x="875" y="97"  text-anchor="middle" font-size="15" font-weight="bold" fill="#111827">S3 · CityJSON&#8242;</text>
+    <text x="875" y="118" text-anchor="middle" font-size="12" fill="#4b5563">rebuilt from database</text>
+  </g>
+
+  <line x1="212" y1="103" x2="286" y2="103" stroke="#1f2937" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="462" y1="103" x2="536" y2="103" stroke="#1f2937" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="712" y1="103" x2="786" y2="103" stroke="#1f2937" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <text x="249" y="53" text-anchor="middle" font-size="11.5" fill="#374151">tessellation,</text>
+  <text x="249" y="38" text-anchor="middle" font-size="11.5" fill="#374151">georeferencing</text>
+  <text x="499" y="53" text-anchor="middle" font-size="11.5" fill="#374151">geometry type,</text>
+  <text x="499" y="38" text-anchor="middle" font-size="11.5" fill="#374151">CRS, tolerance</text>
+  <text x="749" y="53" text-anchor="middle" font-size="11.5" fill="#374151">reconstruction</text>
+
+  <!-- isolation boundary -->
+  <line x1="750" y1="20" x2="750" y2="200" stroke="#9a3412" stroke-width="1.6" stroke-dasharray="6 4"/>
+  <text x="762" y="180" font-size="11.5" font-weight="bold" fill="#9a3412">isolation boundary</text>
+  <text x="762" y="195" font-size="11" fill="#9a3412">separate process; database connection only;</text>
+  <text x="762" y="209" font-size="11" fill="#9a3412">no access to S0, S1 or forward-pass cache</text>
+
+  <!-- comparisons -->
+  <g stroke="#0d6e63" stroke-width="1.5" fill="none">
+    <path d="M125 138 L125 168 L375 168 L375 138"/>
+    <path d="M375 196 L375 222 L625 222 L625 196"/>
+    <path d="M625 138 L625 168 L875 168 L875 138"/>
+    <path d="M125 250 L125 278 L875 278 L875 250"/>
+  </g>
+  <g font-size="12" fill="#0d6e63" text-anchor="middle" font-weight="bold">
+    <text x="250" y="185">&#916; S0&#8594;S1</text>
+    <text x="500" y="239">&#916; S1&#8594;S2</text>
+    <text x="750" y="185">&#916; S2&#8594;S3</text>
+    <text x="500" y="295">end-to-end survival&#160;&#160;S0&#8594;S3</text>
+  </g>
+  <line x1="125" y1="138" x2="125" y2="250" stroke="#0d6e63" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="875" y1="138" x2="875" y2="250" stroke="#0d6e63" stroke-width="1" stroke-dasharray="3 3"/>
+
+  <!-- n-cycle -->
+  <path d="M875 320 L875 350 L375 350 L375 320" stroke="#1f2937" stroke-width="1.4" fill="none" marker-end="url(#a)"/>
+  <text x="625" y="370" text-anchor="middle" font-size="12" fill="#111827">
+    <tspan font-weight="bold">n-cycle drift test</tspan>, n = 10 &#8212; S1 &#8594; S2 &#8594; S3 sub-loop only
+  </text>
+  <text x="625" y="388" text-anchor="middle" font-size="11.5" fill="#4b5563">the full chain is not invertible: no CityJSON &#8594; IFC direction exists</text>
+
+  <!-- matching -->
+  <rect x="40" y="416" width="920" height="82" rx="5" fill="#fafafa" stroke="#d1d5db"/>
+  <text x="58" y="440" font-size="12.5" font-weight="bold" fill="#111827">Object matching, performed twice and independently</text>
+  <text x="58" y="461" font-size="12" fill="#374151">M1 &#8212; by declared object identifier&#160;&#160;&#160;&#8226;&#160;&#160;&#160;M2 &#8212; by geometric nearest neighbour (centroid, volume as tie-break)</text>
+  <text x="58" y="482" font-size="12" fill="#374151">Metrics are computed on M2 pairs. Disagreement between M1 and M2 <tspan font-weight="bold">is</tspan> the identity-loss metric &#8212; avoiding the circularity of using an identifier to measure identifier stability.</text>
+</svg>
+</figure>
+<figure><figcaption>Figure 2 — Experimental design</figcaption><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1f2937"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="600" fill="#ffffff"/>
+
+  <!-- LEFT: corpus arms -->
+  <text x="40" y="34" font-size="13" font-weight="bold" fill="#111827" letter-spacing="0.8">GROUND TRUTH &#8212; TWO ARMS</text>
+
+  <rect x="40" y="50" width="300" height="150" rx="5" fill="#f1f5f4" stroke="#0d6e63" stroke-width="1.4"/>
+  <text x="58" y="74" font-size="13.5" font-weight="bold" fill="#0d6e63">Synthetic arm &#8212; precision</text>
+  <text x="58" y="96"  font-size="11.5" fill="#374151">Parametric IFC with analytically exact volumes.</text>
+  <text x="58" y="113" font-size="11.5" fill="#374151">Box; sloped-face prism; multi-storey stack;</text>
+  <text x="58" y="130" font-size="11.5" fill="#374151">re-entrant plan; party-wall pair.</text>
+  <text x="58" y="152" font-size="11.5" fill="#374151">Plus deliberately degenerate members:</text>
+  <text x="58" y="169" font-size="11.5" fill="#374151">near-coplanar faces, sliver face, unclosed shell</text>
+  <text x="58" y="186" font-size="11.5" font-style="italic" fill="#4b5563">&#8594; measures detection, not accuracy</text>
+
+  <rect x="40" y="216" width="300" height="168" rx="5" fill="#fdf6ee" stroke="#9a3412" stroke-width="1.4"/>
+  <text x="58" y="240" font-size="13.5" font-weight="bold" fill="#9a3412">Real arm &#8212; legal relevance</text>
+  <text x="58" y="262" font-size="11.5" fill="#374151">Production IFC of buildings with registered</text>
+  <text x="58" y="279" font-size="11.5" fill="#374151">condominium plans. Plan area is the legal</text>
+  <text x="58" y="296" font-size="11.5" fill="#374151">reference for materiality claims.</text>
+  <text x="58" y="322" font-size="11.5" font-weight="bold" fill="#9a3412">Confound handled explicitly:</text>
+  <text x="58" y="339" font-size="11.5" fill="#374151">plan area convention (inner face / centre-line,</text>
+  <text x="58" y="356" font-size="11.5" fill="#374151">balconies in or out) is recorded per plan and</text>
+  <text x="58" y="373" font-size="11.5" fill="#374151">reported as a <tspan font-weight="bold">separate term</tspan>, never folded in.</text>
+
+  <rect x="40" y="400" width="300" height="76" rx="5" fill="#fafafa" stroke="#d1d5db"/>
+  <text x="58" y="424" font-size="11.5" fill="#374151">A round trip alone shows only self-consistency:</text>
+  <text x="58" y="441" font-size="11.5" fill="#374151">a wrong volume can round-trip perfectly.</text>
+  <text x="58" y="462" font-size="11.5" font-weight="bold" fill="#111827">Accuracy claims require the external reference.</text>
+
+  <!-- arrow -->
+  <line x1="352" y1="300" x2="392" y2="300" stroke="#1f2937" stroke-width="1.5" marker-end="url(#a2)"/>
+  <text x="372" y="288" text-anchor="middle" font-size="11" fill="#4b5563">each</text>
+  <text x="372" y="320" text-anchor="middle" font-size="11" fill="#4b5563">volume</text>
+
+  <!-- RIGHT: condition ladder -->
+  <text x="410" y="34" font-size="13" font-weight="bold" fill="#111827" letter-spacing="0.8">PIPELINE CONDITIONS &#8212; ABLATION LADDER</text>
+
+  <g font-size="11.5" fill="#374151">
+    <text x="418" y="72" font-weight="bold" fill="#111827">Condition</text>
+    <text x="600" y="60" font-weight="bold" fill="#111827" text-anchor="middle">CRS</text>
+    <text x="600" y="74" text-anchor="middle" font-size="10">4326&#8594;5235</text>
+    <text x="695" y="60" font-weight="bold" fill="#111827" text-anchor="middle">Geom.</text>
+    <text x="695" y="74" text-anchor="middle" font-size="10">closed solid</text>
+    <text x="790" y="60" font-weight="bold" fill="#111827" text-anchor="middle">Semantics</text>
+    <text x="790" y="74" text-anchor="middle" font-size="10">carrier</text>
+    <text x="885" y="60" font-weight="bold" fill="#111827" text-anchor="middle">Tolerance</text>
+    <text x="885" y="74" text-anchor="middle" font-size="10">metric 1 mm</text>
+  </g>
+  <line x1="410" y1="82" x2="960" y2="82" stroke="#9ca3af" stroke-width="1"/>
+
+  <g font-size="12">
+    <text x="418" y="107" fill="#111827" font-weight="bold">C0</text>
+    <text x="448" y="107" fill="#4b5563">baseline, as-is</text>
+    <text x="418" y="142" fill="#111827" font-weight="bold">C1</text>
+    <text x="448" y="142" fill="#4b5563">+ CRS</text>
+    <text x="418" y="177" fill="#111827" font-weight="bold">C2</text>
+    <text x="448" y="177" fill="#4b5563">+ geometry type</text>
+    <text x="418" y="212" fill="#111827" font-weight="bold">C3</text>
+    <text x="448" y="212" fill="#4b5563">+ semantics carrier</text>
+    <text x="418" y="247" fill="#111827" font-weight="bold">C4</text>
+    <text x="448" y="247" fill="#4b5563">+ tolerance</text>
+    <text x="418" y="282" fill="#111827" font-weight="bold">C5</text>
+    <text x="448" y="282" fill="#4b5563">full profile</text>
+  </g>
+
+  <g stroke="#0d6e63" stroke-width="1.5">
+    <circle cx="600" cy="103" r="8" fill="#ffffff"/><circle cx="695" cy="103" r="8" fill="#ffffff"/><circle cx="790" cy="103" r="8" fill="#ffffff"/><circle cx="885" cy="103" r="8" fill="#ffffff"/>
+    <circle cx="600" cy="138" r="8" fill="#0d6e63"/><circle cx="695" cy="138" r="8" fill="#ffffff"/><circle cx="790" cy="138" r="8" fill="#ffffff"/><circle cx="885" cy="138" r="8" fill="#ffffff"/>
+    <circle cx="600" cy="173" r="8" fill="#ffffff"/><circle cx="695" cy="173" r="8" fill="#0d6e63"/><circle cx="790" cy="173" r="8" fill="#ffffff"/><circle cx="885" cy="173" r="8" fill="#ffffff"/>
+    <circle cx="600" cy="208" r="8" fill="#ffffff"/><circle cx="695" cy="208" r="8" fill="#ffffff"/><circle cx="790" cy="208" r="8" fill="#0d6e63"/><circle cx="885" cy="208" r="8" fill="#ffffff"/>
+    <circle cx="600" cy="243" r="8" fill="#ffffff"/><circle cx="695" cy="243" r="8" fill="#ffffff"/><circle cx="790" cy="243" r="8" fill="#ffffff"/><circle cx="885" cy="243" r="8" fill="#0d6e63"/>
+    <circle cx="600" cy="278" r="8" fill="#0d6e63"/><circle cx="695" cy="278" r="8" fill="#0d6e63"/><circle cx="790" cy="278" r="8" fill="#0d6e63"/><circle cx="885" cy="278" r="8" fill="#0d6e63"/>
+  </g>
+  <line x1="410" y1="262" x2="960" y2="262" stroke="#e5e7eb" stroke-width="1"/>
+
+  <text x="410" y="316" font-size="11.5" fill="#374151">&#9679; profiled&#160;&#160;&#160;&#9675; baseline setting</text>
+
+  <rect x="410" y="336" width="550" height="140" rx="5" fill="#fafafa" stroke="#d1d5db"/>
+  <text x="428" y="360" font-size="12.5" font-weight="bold" fill="#111827">Why one factor at a time</text>
+  <text x="428" y="382" font-size="11.5" fill="#374151">C1&#8211;C4 change a single factor from the baseline; C5 changes all four.</text>
+  <text x="428" y="400" font-size="11.5" fill="#374151">This upgrades the claim from &#8220;the profile is better&#8221; to an attributable</text>
+  <text x="428" y="418" font-size="11.5" fill="#374151">statement, e.g. <tspan font-style="italic">CRS accounts for most of the geometric error while</tspan></text>
+  <text x="428" y="436" font-size="11.5" fill="#374151"><tspan font-style="italic">geometry type accounts for all validity failures</tspan>.</text>
+  <text x="428" y="460" font-size="11.5" fill="#9a3412">Factors interact &#8212; a 1e-7&#176; grid is not a fixed metric distance &#8212; so where</text>
+  <text x="428" y="476" font-size="11.5" fill="#9a3412">individual effects do not sum to C5, the interaction is reported.</text>
+
+  <!-- footer -->
+  <rect x="40" y="504" width="920" height="66" rx="5" fill="#f1f5f4" stroke="#0d6e63" stroke-width="1.2"/>
+  <text x="58" y="528" font-size="12.5" font-weight="bold" fill="#0d6e63">Fully paired design</text>
+  <text x="58" y="549" font-size="12" fill="#374151">Every legal volume in the corpus passes through every condition, so all comparisons are within-subject.</text>
+  <text x="58" y="566" font-size="12" fill="#374151">Conditions are frozen before collection begins; if the profile changes afterwards the run is discarded and re-collected in full.</text>
+</svg>
+</figure>
+<figure><figcaption>Figure 3 — Metric typology and survival matrix</figcaption><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" width="1000" height="620" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9a3412"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="620" fill="#ffffff"/>
+
+  <!-- LEFT: three measurement types -->
+  <text x="40" y="34" font-size="13" font-weight="bold" fill="#111827" letter-spacing="0.8">THREE MEASUREMENT TYPES</text>
+
+  <rect x="40" y="50" width="360" height="132" rx="5" fill="#f1f5f4" stroke="#0d6e63" stroke-width="1.3"/>
+  <text x="58" y="74" font-size="13" font-weight="bold" fill="#0d6e63">Type 1 &#8212; continuous &#916;, with units</text>
+  <text x="58" y="95"  font-size="11.5" fill="#374151">floor area &#916; m&#178;&#160;&#160;&#8226;&#160;&#160;volume &#916; m&#179;&#160;&#160;&#8226;&#160;&#160;vertex mm</text>
+  <text x="58" y="112" font-size="11.5" fill="#374151">Hausdorff mm&#160;&#160;&#8226;&#160;&#160;planarity RMS&#160;&#160;&#8226;&#160;&#160;footprint m</text>
+  <text x="58" y="138" font-size="11.5" font-weight="bold" fill="#9a3412">Reported signed, not absolute.</text>
+  <text x="58" y="156" font-size="11.5" fill="#374151">A consistent direction is a systematic bias &#8212; every</text>
+  <text x="58" y="172" font-size="11.5" fill="#374151">unit short the same way. Stronger, and correctable.</text>
+
+  <rect x="40" y="196" width="360" height="72" rx="5" fill="#f8fafc" stroke="#64748b" stroke-width="1.3"/>
+  <text x="58" y="220" font-size="13" font-weight="bold" fill="#334155">Type 2 &#8212; count &#916;</text>
+  <text x="58" y="241" font-size="11.5" fill="#374151">vertices, faces, objects. 480 in and 476 out means</text>
+  <text x="58" y="258" font-size="11.5" fill="#374151">four were welded away &#8212; which four is diagnostic.</text>
+
+  <rect x="40" y="282" width="360" height="94" rx="5" fill="#fdf6ee" stroke="#9a3412" stroke-width="1.3"/>
+  <text x="58" y="306" font-size="13" font-weight="bold" fill="#9a3412">Type 3 &#8212; binary, no &#916; exists</text>
+  <text x="58" y="327" font-size="11.5" fill="#374151">watertight&#160;&#8226;&#160;manifold&#160;&#8226;&#160;semantic label present</text>
+  <text x="58" y="344" font-size="11.5" fill="#374151">parent&#8211;child link present&#160;&#8226;&#160;identifier preserved</text>
+  <text x="58" y="366" font-size="11.5" fill="#374151">These do not shrink by a margin. Pass rates only.</text>
+
+  <!-- asymmetry callout -->
+  <rect x="40" y="392" width="360" height="112" rx="5" fill="#ffffff" stroke="#9a3412" stroke-width="1.8"/>
+  <text x="58" y="416" font-size="13" font-weight="bold" fill="#9a3412">The asymmetry</text>
+  <text x="58" y="438" font-size="11.5" fill="#374151">Type 3 failures <tspan font-weight="bold">destroy</tspan> Type 1 measurements.</text>
+  <text x="58" y="458" font-size="11.5" fill="#374151">A room arriving as loose panels that enclose nothing</text>
+  <text x="58" y="475" font-size="11.5" fill="#374151">has no volume error &#8212; it has <tspan font-weight="bold">no volume</tspan>.</text>
+  <text x="58" y="495" font-size="11.5" fill="#374151">Recorded as <tspan font-family="monospace">undefined</tspan>: never a large error, never dropped.</text>
+
+  <!-- arrow to matrix -->
+  <path d="M406 448 L470 448 L470 300" stroke="#9a3412" stroke-width="1.6" fill="none" marker-end="url(#a3)"/>
+
+  <!-- RIGHT: survival matrix -->
+  <text x="500" y="34" font-size="13" font-weight="bold" fill="#111827" letter-spacing="0.8">THE SURVIVAL MATRIX &#8212; one per condition</text>
+
+  <g font-size="10.5" fill="#374151" text-anchor="middle">
+    <text x="668" y="66">S0&#8594;S1</text>
+    <text x="748" y="66">S1&#8594;S2</text>
+    <text x="828" y="66">S2&#8594;S3</text>
+    <text x="908" y="66">end-to-end</text>
+  </g>
+
+  <g font-size="11.5" fill="#111827">
+    <text x="500" y="99">Coordinate</text>
+    <text x="500" y="139">Topology</text>
+    <text x="500" y="179">Semantics</text>
+    <text x="500" y="219">Identity</text>
+    <text x="500" y="259">Attribute</text>
+  </g>
+  <g font-size="9" fill="#6b7280">
+    <text x="500" y="112">Type 1</text>
+    <text x="500" y="152">Type 3 + 2</text>
+    <text x="500" y="192">Type 3</text>
+    <text x="500" y="232">Type 3</text>
+    <text x="500" y="272">Type 3</text>
+  </g>
+
+  <g stroke="#9ca3af" stroke-width="1" fill="#ffffff">
+    <rect x="628" y="78"  width="80" height="40"/><rect x="708" y="78"  width="80" height="40"/><rect x="788" y="78"  width="80" height="40"/><rect x="868" y="78"  width="80" height="40"/>
+    <rect x="628" y="118" width="80" height="40"/><rect x="708" y="118" width="80" height="40"/><rect x="788" y="118" width="80" height="40"/><rect x="868" y="118" width="80" height="40"/>
+    <rect x="628" y="158" width="80" height="40"/><rect x="708" y="158" width="80" height="40"/><rect x="788" y="158" width="80" height="40"/><rect x="868" y="158" width="80" height="40"/>
+    <rect x="628" y="198" width="80" height="40"/><rect x="708" y="198" width="80" height="40"/><rect x="788" y="198" width="80" height="40"/><rect x="868" y="198" width="80" height="40"/>
+    <rect x="628" y="238" width="80" height="40"/><rect x="708" y="238" width="80" height="40"/><rect x="788" y="238" width="80" height="40"/><rect x="868" y="238" width="80" height="40"/>
+  </g>
+  <g font-size="10" fill="#9ca3af" text-anchor="middle">
+    <text x="668" y="102">% at &#949;</text><text x="748" y="102">% at &#949;</text><text x="828" y="102">% at &#949;</text><text x="908" y="102">% at &#949;</text>
+    <text x="668" y="142">pass %</text><text x="748" y="142">pass %</text><text x="828" y="142">pass %</text><text x="908" y="142">pass %</text>
+    <text x="668" y="182">pass %</text><text x="748" y="182">pass %</text><text x="828" y="182">pass %</text><text x="908" y="182">pass %</text>
+    <text x="668" y="222">pass %</text><text x="748" y="222">pass %</text><text x="828" y="222">pass %</text><text x="908" y="222">pass %</text>
+    <text x="668" y="262">pass %</text><text x="748" y="262">pass %</text><text x="828" y="262">pass %</text><text x="908" y="262">pass %</text>
+  </g>
+
+  <rect x="500" y="300" width="448" height="88" rx="5" fill="#f1f5f4" stroke="#0d6e63" stroke-width="1.2"/>
+  <text x="518" y="324" font-size="12.5" font-weight="bold" fill="#0d6e63">Tolerance, not a single threshold</text>
+  <text x="518" y="345" font-size="11.5" fill="#374151">Coordinate survival is not binary. Every cell is reported at</text>
+  <text x="518" y="363" font-size="11.5" fill="#374151">&#949; &#8712; {1 mm, 10 mm, 100 mm}, so the cliff is visible.</text>
+  <text x="518" y="381" font-size="11.5" fill="#374151">Inherently binary rows are marked tolerance-independent.</text>
+
+  <rect x="500" y="400" width="448" height="104" rx="5" fill="#fdf6ee" stroke="#9a3412" stroke-width="1.4"/>
+  <text x="518" y="424" font-size="12.5" font-weight="bold" fill="#9a3412">No single aggregate survival figure is reported</text>
+  <text x="518" y="446" font-size="11.5" fill="#374151">&#8220;94% survived&#8221; is meaningless when coordinates, topology,</text>
+  <text x="518" y="464" font-size="11.5" fill="#374151">semantics and identity fail in different ways for different</text>
+  <text x="518" y="482" font-size="11.5" fill="#374151">reasons. Aggregation makes the loss unattributable, which</text>
+  <text x="518" y="497" font-size="11.5" fill="#374151">is precisely what the taxonomy exists to prevent.</text>
+
+  <!-- footer: legal outcome binding -->
+  <rect x="40" y="524" width="908" height="72" rx="5" fill="#fafafa" stroke="#d1d5db"/>
+  <text x="58" y="548" font-size="12.5" font-weight="bold" fill="#111827">Each class is additionally bound to the legal outcome it can alter (RQ2)</text>
+  <text x="58" y="570" font-size="11.5" fill="#374151">coordinate &#8594; registered area and volume&#160;&#160;&#8226;&#160;&#160;coordinate + topology &#8594; share fraction&#160;&#160;&#8226;&#160;&#160;topology &#8594; overlap / double-registration detection</text>
+  <text x="58" y="588" font-size="11.5" fill="#374151">georeferencing &#8594; parcel assignment&#160;&#160;&#8226;&#160;&#160;semantics &#8594; identification of the party wall and of common property</text>
+</svg>
+</figure>
+</body></html>

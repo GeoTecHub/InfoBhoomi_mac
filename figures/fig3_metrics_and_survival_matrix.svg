@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" width="1000" height="620" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9a3412"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="620" fill="#ffffff"/>
+
+  <!-- LEFT: three measurement types -->
+  <text x="40" y="34" font-size="13" font-weight="bold" fill="#111827" letter-spacing="0.8">THREE MEASUREMENT TYPES</text>
+
+  <rect x="40" y="50" width="360" height="132" rx="5" fill="#f1f5f4" stroke="#0d6e63" stroke-width="1.3"/>
+  <text x="58" y="74" font-size="13" font-weight="bold" fill="#0d6e63">Type 1 &#8212; continuous &#916;, with units</text>
+  <text x="58" y="95"  font-size="11.5" fill="#374151">floor area &#916; m&#178;&#160;&#160;&#8226;&#160;&#160;volume &#916; m&#179;&#160;&#160;&#8226;&#160;&#160;vertex mm</text>
+  <text x="58" y="112" font-size="11.5" fill="#374151">Hausdorff mm&#160;&#160;&#8226;&#160;&#160;planarity RMS&#160;&#160;&#8226;&#160;&#160;footprint m</text>
+  <text x="58" y="138" font-size="11.5" font-weight="bold" fill="#9a3412">Reported signed, not absolute.</text>
+  <text x="58" y="156" font-size="11.5" fill="#374151">A consistent direction is a systematic bias &#8212; every</text>
+  <text x="58" y="172" font-size="11.5" fill="#374151">unit short the same way. Stronger, and correctable.</text>
+
+  <rect x="40" y="196" width="360" height="72" rx="5" fill="#f8fafc" stroke="#64748b" stroke-width="1.3"/>
+  <text x="58" y="220" font-size="13" font-weight="bold" fill="#334155">Type 2 &#8212; count &#916;</text>
+  <text x="58" y="241" font-size="11.5" fill="#374151">vertices, faces, objects. 480 in and 476 out means</text>
+  <text x="58" y="258" font-size="11.5" fill="#374151">four were welded away &#8212; which four is diagnostic.</text>
+
+  <rect x="40" y="282" width="360" height="94" rx="5" fill="#fdf6ee" stroke="#9a3412" stroke-width="1.3"/>
+  <text x="58" y="306" font-size="13" font-weight="bold" fill="#9a3412">Type 3 &#8212; binary, no &#916; exists</text>
+  <text x="58" y="327" font-size="11.5" fill="#374151">watertight&#160;&#8226;&#160;manifold&#160;&#8226;&#160;semantic label present</text>
+  <text x="58" y="344" font-size="11.5" fill="#374151">parent&#8211;child link present&#160;&#8226;&#160;identifier preserved</text>
+  <text x="58" y="366" font-size="11.5" fill="#374151">These do not shrink by a margin. Pass rates only.</text>
+
+  <!-- asymmetry callout -->
+  <rect x="40" y="392" width="360" height="112" rx="5" fill="#ffffff" stroke="#9a3412" stroke-width="1.8"/>
+  <text x="58" y="416" font-size="13" font-weight="bold" fill="#9a3412">The asymmetry</text>
+  <text x="58" y="438" font-size="11.5" fill="#374151">Type 3 failures <tspan font-weight="bold">destroy</tspan> Type 1 measurements.</text>
+  <text x="58" y="458" font-size="11.5" fill="#374151">A room arriving as loose panels that enclose nothing</text>
+  <text x="58" y="475" font-size="11.5" fill="#374151">has no volume error &#8212; it has <tspan font-weight="bold">no volume</tspan>.</text>
+  <text x="58" y="495" font-size="11.5" fill="#374151">Recorded as <tspan font-family="monospace">undefined</tspan>: never a large error, never dropped.</text>
+
+  <!-- arrow to matrix -->
+  <path d="M406 448 L470 448 L470 300" stroke="#9a3412" stroke-width="1.6" fill="none" marker-end="url(#a3)"/>
+
+  <!-- RIGHT: survival matrix -->
+  <text x="500" y="34" font-size="13" font-weight="bold" fill="#111827" letter-spacing="0.8">THE SURVIVAL MATRIX &#8212; one per condition</text>
+
+  <g font-size="10.5" fill="#374151" text-anchor="middle">
+    <text x="668" y="66">S0&#8594;S1</text>
+    <text x="748" y="66">S1&#8594;S2</text>
+    <text x="828" y="66">S2&#8594;S3</text>
+    <text x="908" y="66">end-to-end</text>
+  </g>
+
+  <g font-size="11.5" fill="#111827">
+    <text x="500" y="99">Coordinate</text>
+    <text x="500" y="139">Topology</text>
+    <text x="500" y="179">Semantics</text>
+    <text x="500" y="219">Identity</text>
+    <text x="500" y="259">Attribute</text>
+  </g>
+  <g font-size="9" fill="#6b7280">
+    <text x="500" y="112">Type 1</text>
+    <text x="500" y="152">Type 3 + 2</text>
+    <text x="500" y="192">Type 3</text>
+    <text x="500" y="232">Type 3</text>
+    <text x="500" y="272">Type 3</text>
+  </g>
+
+  <g stroke="#9ca3af" stroke-width="1" fill="#ffffff">
+    <rect x="628" y="78"  width="80" height="40"/><rect x="708" y="78"  width="80" height="40"/><rect x="788" y="78"  width="80" height="40"/><rect x="868" y="78"  width="80" height="40"/>
+    <rect x="628" y="118" width="80" height="40"/><rect x="708" y="118" width="80" height="40"/><rect x="788" y="118" width="80" height="40"/><rect x="868" y="118" width="80" height="40"/>
+    <rect x="628" y="158" width="80" height="40"/><rect x="708" y="158" width="80" height="40"/><rect x="788" y="158" width="80" height="40"/><rect x="868" y="158" width="80" height="40"/>
+    <rect x="628" y="198" width="80" height="40"/><rect x="708" y="198" width="80" height="40"/><rect x="788" y="198" width="80" height="40"/><rect x="868" y="198" width="80" height="40"/>
+    <rect x="628" y="238" width="80" height="40"/><rect x="708" y="238" width="80" height="40"/><rect x="788" y="238" width="80" height="40"/><rect x="868" y="238" width="80" height="40"/>
+  </g>
+  <g font-size="10" fill="#9ca3af" text-anchor="middle">
+    <text x="668" y="102">% at &#949;</text><text x="748" y="102">% at &#949;</text><text x="828" y="102">% at &#949;</text><text x="908" y="102">% at &#949;</text>
+    <text x="668" y="142">pass %</text><text x="748" y="142">pass %</text><text x="828" y="142">pass %</text><text x="908" y="142">pass %</text>
+    <text x="668" y="182">pass %</text><text x="748" y="182">pass %</text><text x="828" y="182">pass %</text><text x="908" y="182">pass %</text>
+    <text x="668" y="222">pass %</text><text x="748" y="222">pass %</text><text x="828" y="222">pass %</text><text x="908" y="222">pass %</text>
+    <text x="668" y="262">pass %</text><text x="748" y="262">pass %</text><text x="828" y="262">pass %</text><text x="908" y="262">pass %</text>
+  </g>
+
+  <rect x="500" y="300" width="448" height="88" rx="5" fill="#f1f5f4" stroke="#0d6e63" stroke-width="1.2"/>
+  <text x="518" y="324" font-size="12.5" font-weight="bold" fill="#0d6e63">Tolerance, not a single threshold</text>
+  <text x="518" y="345" font-size="11.5" fill="#374151">Coordinate survival is not binary. Every cell is reported at</text>
+  <text x="518" y="363" font-size="11.5" fill="#374151">&#949; &#8712; {1 mm, 10 mm, 100 mm}, so the cliff is visible.</text>
+  <text x="518" y="381" font-size="11.5" fill="#374151">Inherently binary rows are marked tolerance-independent.</text>
+
+  <rect x="500" y="400" width="448" height="104" rx="5" fill="#fdf6ee" stroke="#9a3412" stroke-width="1.4"/>
+  <text x="518" y="424" font-size="12.5" font-weight="bold" fill="#9a3412">No single aggregate survival figure is reported</text>
+  <text x="518" y="446" font-size="11.5" fill="#374151">&#8220;94% survived&#8221; is meaningless when coordinates, topology,</text>
+  <text x="518" y="464" font-size="11.5" fill="#374151">semantics and identity fail in different ways for different</text>
+  <text x="518" y="482" font-size="11.5" fill="#374151">reasons. Aggregation makes the loss unattributable, which</text>
+  <text x="518" y="497" font-size="11.5" fill="#374151">is precisely what the taxonomy exists to prevent.</text>
+
+  <!-- footer: legal outcome binding -->
+  <rect x="40" y="524" width="908" height="72" rx="5" fill="#fafafa" stroke="#d1d5db"/>
+  <text x="58" y="548" font-size="12.5" font-weight="bold" fill="#111827">Each class is additionally bound to the legal outcome it can alter (RQ2)</text>
+  <text x="58" y="570" font-size="11.5" fill="#374151">coordinate &#8594; registered area and volume&#160;&#160;&#8226;&#160;&#160;coordinate + topology &#8594; share fraction&#160;&#160;&#8226;&#160;&#160;topology &#8594; overlap / double-registration detection</text>
+  <text x="58" y="588" font-size="11.5" fill="#374151">georeferencing &#8594; parcel assignment&#160;&#160;&#8226;&#160;&#160;semantics &#8594; identification of the party wall and of common property</text>
+</svg>

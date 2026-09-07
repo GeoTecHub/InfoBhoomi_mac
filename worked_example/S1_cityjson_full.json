@@ -1,0 +1,1807 @@
+{
+ "type": "CityJSON",
+ "version": "2.0",
+ "transform": {
+  "scale": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "translate": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "metadata": {
+  "datasetTitle": "InfoBhoomi IFC Cadastral Export",
+  "referenceSystem": "local-ENU-metres",
+  "georeferencing": {
+   "method": "manual_placement",
+   "anchor_lon": 80.0,
+   "anchor_lat": 6.9,
+   "base_z": 0.0,
+   "rotation_deg": 0.0,
+   "scale": 1.0,
+   "src_anchor_xy": [
+    0.0,
+    0.0
+   ],
+   "crs": "EPSG:4326"
+  }
+ },
+ "CityObjects": {
+  "26JHatoHX8uPohez7UDUgn": {
+   "type": "BuildingRoom",
+   "attributes": {
+    "name": "1",
+    "globalid": "26JHatoHX8uPohez7UDUgn",
+    "longname": "Dining Room",
+    "property_sets": {
+     "Pset_SpaceCommon": {
+      "Reference": "Dining Room 1",
+      "IsExternal": false
+     },
+     "Pset_SpaceHeaterTypeCommon": {
+      "Reference": "Dining Room 1"
+     }
+    },
+    "floor": "Ground floor",
+    "area_m2": 122.14,
+    "geometry_source": "ifc_shape"
+   },
+   "parents": [
+    "3$4TpeCH15qfifOhkT6X$S"
+   ],
+   "geometry": [
+    {
+     "type": "MultiSurface",
+     "lod": "2.2",
+     "boundaries": [
+      [
+       [
+        0,
+        1,
+        2
+       ]
+      ],
+      [
+       [
+        3,
+        0,
+        2
+       ]
+      ],
+      [
+       [
+        3,
+        2,
+        4
+       ]
+      ],
+      [
+       [
+        5,
+        3,
+        4
+       ]
+      ],
+      [
+       [
+        5,
+        4,
+        6
+       ]
+      ],
+      [
+       [
+        6,
+        4,
+        7
+       ]
+      ],
+      [
+       [
+        6,
+        7,
+        1
+       ]
+      ],
+      [
+       [
+        0,
+        6,
+        1
+       ]
+      ],
+      [
+       [
+        2,
+        1,
+        7
+       ]
+      ],
+      [
+       [
+        2,
+        7,
+        4
+       ]
+      ],
+      [
+       [
+        6,
+        0,
+        3
+       ]
+      ],
+      [
+       [
+        5,
+        6,
+        3
+       ]
+      ]
+     ],
+     "semantics": {
+      "surfaces": [
+       {
+        "type": "InteriorWallSurface"
+       },
+       {
+        "type": "FloorSurface"
+       },
+       {
+        "type": "CeilingSurface"
+       }
+      ],
+      "values": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       1,
+       1,
+       2,
+       2
+      ]
+     }
+    }
+   ]
+  },
+  "26JHatoHX8uPohez7UDUgo": {
+   "type": "BuildingRoom",
+   "attributes": {
+    "name": "2",
+    "globalid": "26JHatoHX8uPohez7UDUgo",
+    "longname": "Living Room",
+    "property_sets": {
+     "Pset_SpaceCommon": {
+      "IsExternal": false,
+      "Reference": "Living Room 2"
+     },
+     "Pset_SpaceHeaterTypeCommon": {
+      "Reference": "Living Room 2"
+     }
+    },
+    "floor": "Ground floor",
+    "area_m2": 288.09,
+    "geometry_source": "ifc_shape"
+   },
+   "parents": [
+    "3$4TpeCH15qfifOhkT6X$S"
+   ],
+   "geometry": [
+    {
+     "type": "MultiSurface",
+     "lod": "2.2",
+     "boundaries": [
+      [
+       [
+        8,
+        9,
+        10
+       ]
+      ],
+      [
+       [
+        8,
+        10,
+        11
+       ]
+      ],
+      [
+       [
+        12,
+        8,
+        11
+       ]
+      ],
+      [
+       [
+        12,
+        11,
+        13
+       ]
+      ],
+      [
+       [
+        14,
+        12,
+        13
+       ]
+      ],
+      [
+       [
+        14,
+        13,
+        15
+       ]
+      ],
+      [
+       [
+        16,
+        14,
+        15
+       ]
+      ],
+      [
+       [
+        17,
+        14,
+        16
+       ]
+      ],
+      [
+       [
+        18,
+        17,
+        16
+       ]
+      ],
+      [
+       [
+        19,
+        17,
+        18
+       ]
+      ],
+      [
+       [
+        20,
+        19,
+        18
+       ]
+      ],
+      [
+       [
+        20,
+        18,
+        21
+       ]
+      ],
+      [
+       [
+        9,
+        20,
+        21
+       ]
+      ],
+      [
+       [
+        9,
+        21,
+        10
+       ]
+      ],
+      [
+       [
+        20,
+        9,
+        8
+       ]
+      ],
+      [
+       [
+        20,
+        8,
+        12
+       ]
+      ],
+      [
+       [
+        20,
+        12,
+        14
+       ]
+      ],
+      [
+       [
+        17,
+        19,
+        20
+       ]
+      ],
+      [
+       [
+        17,
+        20,
+        14
+       ]
+      ],
+      [
+       [
+        11,
+        10,
+        21
+       ]
+      ],
+      [
+       [
+        13,
+        11,
+        21
+       ]
+      ],
+      [
+       [
+        15,
+        13,
+        21
+       ]
+      ],
+      [
+       [
+        21,
+        18,
+        16
+       ]
+      ],
+      [
+       [
+        15,
+        21,
+        16
+       ]
+      ]
+     ],
+     "semantics": {
+      "surfaces": [
+       {
+        "type": "InteriorWallSurface"
+       },
+       {
+        "type": "FloorSurface"
+       },
+       {
+        "type": "CeilingSurface"
+       }
+      ],
+      "values": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       1,
+       1,
+       1,
+       1,
+       1,
+       2,
+       2,
+       2,
+       2,
+       2
+      ]
+     }
+    }
+   ]
+  },
+  "26JHatoHX8uPohez7UDUfF": {
+   "type": "BuildingRoom",
+   "attributes": {
+    "name": "3",
+    "globalid": "26JHatoHX8uPohez7UDUfF",
+    "longname": "Room",
+    "property_sets": {
+     "Pset_SpaceCommon": {
+      "IsExternal": false,
+      "Reference": "Room 3"
+     },
+     "Pset_SpaceHeaterTypeCommon": {
+      "Reference": "Room 3"
+     }
+    },
+    "floor": "Ground floor",
+    "area_m2": 175.36,
+    "geometry_source": "ifc_shape"
+   },
+   "parents": [
+    "3$4TpeCH15qfifOhkT6X$S"
+   ],
+   "geometry": [
+    {
+     "type": "MultiSurface",
+     "lod": "2.2",
+     "boundaries": [
+      [
+       [
+        22,
+        23,
+        24
+       ]
+      ],
+      [
+       [
+        25,
+        22,
+        24
+       ]
+      ],
+      [
+       [
+        25,
+        24,
+        26
+       ]
+      ],
+      [
+       [
+        27,
+        25,
+        26
+       ]
+      ],
+      [
+       [
+        27,
+        26,
+        28
+       ]
+      ],
+      [
+       [
+        29,
+        27,
+        28
+       ]
+      ],
+      [
+       [
+        29,
+        28,
+        30
+       ]
+      ],
+      [
+       [
+        31,
+        29,
+        30
+       ]
+      ],
+      [
+       [
+        31,
+        30,
+        23
+       ]
+      ],
+      [
+       [
+        22,
+        31,
+        23
+       ]
+      ],
+      [
+       [
+        24,
+        23,
+        28
+       ]
+      ],
+      [
+       [
+        23,
+        30,
+        28
+       ]
+      ],
+      [
+       [
+        24,
+        28,
+        26
+       ]
+      ],
+      [
+       [
+        29,
+        22,
+        25
+       ]
+      ],
+      [
+       [
+        29,
+        31,
+        22
+       ]
+      ],
+      [
+       [
+        27,
+        29,
+        25
+       ]
+      ]
+     ],
+     "semantics": {
+      "surfaces": [
+       {
+        "type": "InteriorWallSurface"
+       },
+       {
+        "type": "FloorSurface"
+       },
+       {
+        "type": "CeilingSurface"
+       }
+      ],
+      "values": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       1,
+       1,
+       1,
+       2,
+       2,
+       2
+      ]
+     }
+    }
+   ]
+  },
+  "26JHatoHX8uPohez7UDUf8": {
+   "type": "BuildingRoom",
+   "attributes": {
+    "name": "4",
+    "globalid": "26JHatoHX8uPohez7UDUf8",
+    "longname": "Bathroom",
+    "property_sets": {
+     "Pset_SpaceCommon": {
+      "IsExternal": false,
+      "Reference": "Bathroom 4"
+     },
+     "Pset_SpaceHeaterTypeCommon": {
+      "Reference": "Bathroom 4"
+     }
+    },
+    "floor": "Ground floor",
+    "area_m2": 129.93,
+    "geometry_source": "ifc_shape"
+   },
+   "parents": [
+    "3$4TpeCH15qfifOhkT6X$S"
+   ],
+   "geometry": [
+    {
+     "type": "MultiSurface",
+     "lod": "2.2",
+     "boundaries": [
+      [
+       [
+        32,
+        33,
+        34
+       ]
+      ],
+      [
+       [
+        35,
+        32,
+        34
+       ]
+      ],
+      [
+       [
+        35,
+        34,
+        36
+       ]
+      ],
+      [
+       [
+        37,
+        35,
+        36
+       ]
+      ],
+      [
+       [
+        37,
+        36,
+        38
+       ]
+      ],
+      [
+       [
+        39,
+        37,
+        38
+       ]
+      ],
+      [
+       [
+        39,
+        38,
+        33
+       ]
+      ],
+      [
+       [
+        32,
+        39,
+        33
+       ]
+      ],
+      [
+       [
+        33,
+        38,
+        34
+       ]
+      ],
+      [
+       [
+        34,
+        38,
+        36
+       ]
+      ],
+      [
+       [
+        35,
+        39,
+        32
+       ]
+      ],
+      [
+       [
+        37,
+        39,
+        35
+       ]
+      ]
+     ],
+     "semantics": {
+      "surfaces": [
+       {
+        "type": "InteriorWallSurface"
+       },
+       {
+        "type": "FloorSurface"
+       },
+       {
+        "type": "CeilingSurface"
+       }
+      ],
+      "values": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       1,
+       1,
+       2,
+       2
+      ]
+     }
+    }
+   ]
+  },
+  "26JHatoHX8uPohez7UDUf6": {
+   "type": "BuildingRoom",
+   "attributes": {
+    "name": "5",
+    "globalid": "26JHatoHX8uPohez7UDUf6",
+    "longname": "Bedrrom2",
+    "property_sets": {
+     "Pset_SpaceCommon": {
+      "IsExternal": false,
+      "Reference": "Bedrrom2 5"
+     },
+     "Pset_SpaceHeaterTypeCommon": {
+      "Reference": "Bedrrom2 5"
+     }
+    },
+    "floor": "First floor",
+    "area_m2": 177.74,
+    "geometry_source": "ifc_shape"
+   },
+   "parents": [
+    "3$4TpeCH15qfifOhkT6X$S"
+   ],
+   "geometry": [
+    {
+     "type": "MultiSurface",
+     "lod": "2.2",
+     "boundaries": [
+      [
+       [
+        40,
+        41,
+        42
+       ]
+      ],
+      [
+       [
+        43,
+        40,
+        42
+       ]
+      ],
+      [
+       [
+        43,
+        42,
+        44
+       ]
+      ],
+      [
+       [
+        45,
+        43,
+        44
+       ]
+      ],
+      [
+       [
+        45,
+        44,
+        46
+       ]
+      ],
+      [
+       [
+        47,
+        45,
+        46
+       ]
+      ],
+      [
+       [
+        47,
+        46,
+        41
+       ]
+      ],
+      [
+       [
+        40,
+        47,
+        41
+       ]
+      ],
+      [
+       [
+        42,
+        41,
+        46
+       ]
+      ],
+      [
+       [
+        42,
+        46,
+        44
+       ]
+      ],
+      [
+       [
+        47,
+        40,
+        43
+       ]
+      ],
+      [
+       [
+        45,
+        47,
+        43
+       ]
+      ]
+     ],
+     "semantics": {
+      "surfaces": [
+       {
+        "type": "InteriorWallSurface"
+       },
+       {
+        "type": "FloorSurface"
+       },
+       {
+        "type": "CeilingSurface"
+       }
+      ],
+      "values": [
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       1,
+       1,
+       2,
+       2
+      ]
+     }
+    }
+   ]
+  },
+  "26JHatoHX8uPohez7UDUf2": {
+   "type": "BuildingRoom",
+   "attributes": {
+    "name": "6",
+    "globalid": "26JHatoHX8uPohez7UDUf2",
+    "longname": "Bedroom1",
+    "property_sets": {
+     "Pset_SpaceCommon": {
+      "IsExternal": false,
+      "Reference": "Bedroom1 6"
+     },
+     "Pset_SpaceHeaterTypeCommon": {
+      "Reference": "Bedroom1 6"
+     }
+    },
+    "floor": "First floor",
+    "area_m2": 235.36,
+    "geometry_source": "ifc_shape"
+   },
+   "parents": [
+    "3$4TpeCH15qfifOhkT6X$S"
+   ],
+   "geometry": [
+    {
+     "type": "MultiSurface",
+     "lod": "2.2",
+     "boundaries": [
+      [
+       [
+        48,
+        49,
+        50
+       ]
+      ],
+      [
+       [
+        51,
+        52,
+        48
+       ]
+      ],
+      [
+       [
+        53,
+        48,
+        50
+       ]
+      ],
+      [
+       [
+        53,
+        51,
+        48
+       ]
+      ],
+      [
+       [
+        54,
+        55,
+        56
+       ]
+      ],
+      [
+       [
+        57,
+        56,
+        58
+       ]
+      ],
+      [
+       [
+        57,
+        54,
+        56
+       ]
+      ],
+      [
+       [
+        55,
+        59,
+        60
+       ]
+      ],
+      [
+       [
+        55,
+        60,
+        56
+       ]
+      ],
+      [
+       [
+        61,
+        55,
+        54
+       ]
+      ],
+      [
+       [
+        61,
+        59,
+        55
+       ]
+      ],
+      [
+       [
+        61,
+        57,
+        62
+       ]
+      ],
+      [
+       [
+        54,
+        57,
+        61
+       ]
+      ],
+      [
+       [
+        53,
+        62,
+        57
+       ]
+      ],
+      [
+       [
+        58,
+        53,
+        57
+       ]
+      ],
+      [
+       [
+        51,
+        53,
+        58
+       ]
+      ],
+      [
+       [
+        56,
+        60,
+        63
+       ]
+      ],
+      [
+       [
+        56,
+        63,
+        52
+       ]
+      ],
+      [
+       [
+        58,
+        52,
+        51
+       ]
+      ],
+      [
+       [
+        58,
+        56,
+        52
+       ]
+      ],
+      [
+       [
+        61,
+        50,
+        49
+       ]
+      ],
+      [
+       [
+        61,
+        49,
+        59
+       ]
+      ],
+      [
+       [
+        49,
+        60,
+        59
+       ]
+      ],
+      [
+       [
+        48,
+        63,
+        60
+       ]
+      ],
+      [
+       [
+        48,
+        60,
+        49
+       ]
+      ],
+      [
+       [
+        63,
+        48,
+        52
+       ]
+      ],
+      [
+       [
+        62,
+        50,
+        61
+       ]
+      ],
+      [
+       [
+        62,
+        53,
+        50
+       ]
+      ]
+     ],
+     "semantics": {
+      "surfaces": [
+       {
+        "type": "CeilingSurface"
+       },
+       {
+        "type": "FloorSurface"
+       },
+       {
+        "type": "InteriorWallSurface"
+       }
+      ],
+      "values": [
+       0,
+       0,
+       0,
+       0,
+       1,
+       1,
+       1,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  "26JHatoHX8uPohez7UDUfV": {
+   "type": "BuildingRoom",
+   "attributes": {
+    "name": "7",
+    "globalid": "26JHatoHX8uPohez7UDUfV",
+    "longname": "Lobby",
+    "property_sets": {
+     "Pset_SpaceCommon": {
+      "IsExternal": false,
+      "Reference": "Lobby 7"
+     },
+     "Pset_SpaceHeaterTypeCommon": {
+      "Reference": "Lobby 7"
+     }
+    },
+    "floor": "First floor",
+    "area_m2": 304.92,
+    "geometry_source": "ifc_shape"
+   },
+   "parents": [
+    "3$4TpeCH15qfifOhkT6X$S"
+   ],
+   "geometry": [
+    {
+     "type": "MultiSurface",
+     "lod": "2.2",
+     "boundaries": [
+      [
+       [
+        64,
+        65,
+        66
+       ]
+      ],
+      [
+       [
+        64,
+        66,
+        67
+       ]
+      ],
+      [
+       [
+        68,
+        64,
+        67
+       ]
+      ],
+      [
+       [
+        69,
+        70,
+        71
+       ]
+      ],
+      [
+       [
+        72,
+        69,
+        71
+       ]
+      ],
+      [
+       [
+        73,
+        69,
+        72
+       ]
+      ],
+      [
+       [
+        72,
+        74,
+        73
+       ]
+      ],
+      [
+       [
+        75,
+        74,
+        72
+       ]
+      ],
+      [
+       [
+        71,
+        76,
+        75
+       ]
+      ],
+      [
+       [
+        71,
+        75,
+        72
+       ]
+      ],
+      [
+       [
+        77,
+        71,
+        70
+       ]
+      ],
+      [
+       [
+        77,
+        76,
+        71
+       ]
+      ],
+      [
+       [
+        69,
+        64,
+        68
+       ]
+      ],
+      [
+       [
+        70,
+        68,
+        77
+       ]
+      ],
+      [
+       [
+        70,
+        69,
+        68
+       ]
+      ],
+      [
+       [
+        73,
+        74,
+        65
+       ]
+      ],
+      [
+       [
+        69,
+        65,
+        64
+       ]
+      ],
+      [
+       [
+        69,
+        73,
+        65
+       ]
+      ],
+      [
+       [
+        77,
+        67,
+        76
+       ]
+      ],
+      [
+       [
+        77,
+        68,
+        67
+       ]
+      ],
+      [
+       [
+        75,
+        76,
+        67
+       ]
+      ],
+      [
+       [
+        66,
+        75,
+        67
+       ]
+      ],
+      [
+       [
+        74,
+        75,
+        66
+       ]
+      ],
+      [
+       [
+        65,
+        74,
+        66
+       ]
+      ]
+     ],
+     "semantics": {
+      "surfaces": [
+       {
+        "type": "CeilingSurface"
+       },
+       {
+        "type": "FloorSurface"
+       },
+       {
+        "type": "InteriorWallSurface"
+       }
+      ],
+      "values": [
+       0,
+       0,
+       0,
+       1,
+       1,
+       1,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       2,
+       0,
+       0,
+       0,
+       0,
+       0,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  "3$4TpeCH15qfifOhkT6X$S": {
+   "type": "Building",
+   "attributes": {
+    "globalid": "3$4TpeCH15qfifOhkT6X$S",
+    "property_sets": {
+     "Pset_BuildingCommon": {
+      "Reference": "Project Information",
+      "NumberOfStoreys": 2,
+      "IsLandmarked": "UNKNOWN"
+     },
+     "Pset_BuildingElementProxyCommon": {
+      "Reference": "Project Information",
+      "IsExternal": false
+     },
+     "Pset_BuildingStoreyCommon": {
+      "Reference": "Project Information",
+      "AboveGround": "UNKNOWN"
+     },
+     "Pset_BuildingSystemCommon": {
+      "Reference": "Project Information"
+     }
+    }
+   },
+   "children": [
+    "26JHatoHX8uPohez7UDUgn",
+    "26JHatoHX8uPohez7UDUgo",
+    "26JHatoHX8uPohez7UDUfF",
+    "26JHatoHX8uPohez7UDUf8",
+    "26JHatoHX8uPohez7UDUf6",
+    "26JHatoHX8uPohez7UDUf2",
+    "26JHatoHX8uPohez7UDUfV"
+   ],
+   "geometry": []
+  }
+ },
+ "vertices": [
+  [
+   -20.017,
+   17.441,
+   3.048
+  ],
+  [
+   -20.017,
+   17.441,
+   0.0
+  ],
+  [
+   -20.017,
+   7.344,
+   0.0
+  ],
+  [
+   -20.017,
+   7.344,
+   3.048
+  ],
+  [
+   -7.92,
+   7.344,
+   0.0
+  ],
+  [
+   -7.92,
+   7.344,
+   3.048
+  ],
+  [
+   -7.92,
+   17.441,
+   3.048
+  ],
+  [
+   -7.92,
+   17.441,
+   0.0
+  ],
+  [
+   -7.717,
+   3.244,
+   0.0
+  ],
+  [
+   4.78,
+   3.244,
+   0.0
+  ],
+  [
+   4.78,
+   3.244,
+   3.048
+  ],
+  [
+   -7.717,
+   3.244,
+   3.048
+  ],
+  [
+   -7.717,
+   7.242,
+   0.0
+  ],
+  [
+   -7.717,
+   7.242,
+   3.048
+  ],
+  [
+   -7.717,
+   17.441,
+   0.0
+  ],
+  [
+   -7.717,
+   17.441,
+   3.048
+  ],
+  [
+   13.78,
+   17.441,
+   3.048
+  ],
+  [
+   13.78,
+   17.441,
+   0.0
+  ],
+  [
+   13.78,
+   5.144,
+   3.048
+  ],
+  [
+   13.78,
+   5.144,
+   0.0
+  ],
+  [
+   4.78,
+   5.144,
+   0.0
+  ],
+  [
+   4.78,
+   5.144,
+   3.048
+  ],
+  [
+   -20.017,
+   7.141,
+   3.048
+  ],
+  [
+   -20.017,
+   7.141,
+   0.0
+  ],
+  [
+   -20.017,
+   -7.356,
+   0.0
+  ],
+  [
+   -20.017,
+   -7.356,
+   3.048
+  ],
+  [
+   -7.92,
+   -7.356,
+   0.0
+  ],
+  [
+   -7.92,
+   -7.356,
+   3.048
+  ],
+  [
+   -7.92,
+   3.142,
+   0.0
+  ],
+  [
+   -7.92,
+   3.142,
+   3.048
+  ],
+  [
+   -7.92,
+   7.141,
+   0.0
+  ],
+  [
+   -7.92,
+   7.141,
+   3.048
+  ],
+  [
+   -7.717,
+   -7.356,
+   3.048
+  ],
+  [
+   -7.717,
+   -7.356,
+   0.0
+  ],
+  [
+   4.78,
+   -7.356,
+   0.0
+  ],
+  [
+   4.78,
+   -7.356,
+   3.048
+  ],
+  [
+   4.78,
+   3.041,
+   0.0
+  ],
+  [
+   4.78,
+   3.041,
+   3.048
+  ],
+  [
+   -7.717,
+   3.041,
+   0.0
+  ],
+  [
+   -7.717,
+   3.041,
+   3.048
+  ],
+  [
+   -20.017,
+   17.441,
+   7.048
+  ],
+  [
+   -20.017,
+   17.441,
+   4.0
+  ],
+  [
+   -20.017,
+   5.144,
+   4.0
+  ],
+  [
+   -20.017,
+   5.144,
+   7.048
+  ],
+  [
+   -5.563,
+   5.144,
+   4.0
+  ],
+  [
+   -5.563,
+   5.144,
+   7.048
+  ],
+  [
+   -5.563,
+   17.441,
+   4.0
+  ],
+  [
+   -5.563,
+   17.441,
+   7.048
+  ],
+  [
+   0.453,
+   9.47,
+   11.048
+  ],
+  [
+   9.453,
+   9.47,
+   11.048
+  ],
+  [
+   9.453,
+   13.114,
+   11.048
+  ],
+  [
+   -5.36,
+   5.144,
+   11.048
+  ],
+  [
+   0.453,
+   5.144,
+   11.048
+  ],
+  [
+   -5.36,
+   13.114,
+   11.048
+  ],
+  [
+   13.78,
+   17.441,
+   4.0
+  ],
+  [
+   13.78,
+   5.144,
+   4.0
+  ],
+  [
+   4.881,
+   5.144,
+   4.0
+  ],
+  [
+   -5.36,
+   17.441,
+   4.0
+  ],
+  [
+   -5.36,
+   5.144,
+   4.0
+  ],
+  [
+   13.78,
+   5.144,
+   7.803
+  ],
+  [
+   4.881,
+   5.144,
+   7.803
+  ],
+  [
+   13.78,
+   17.441,
+   7.803
+  ],
+  [
+   -5.36,
+   17.441,
+   7.803
+  ],
+  [
+   4.78,
+   5.144,
+   7.803
+  ],
+  [
+   -5.461,
+   4.941,
+   11.048
+  ],
+  [
+   -15.691,
+   4.941,
+   11.048
+  ],
+  [
+   -15.691,
+   -3.03,
+   11.048
+  ],
+  [
+   0.453,
+   -3.03,
+   11.048
+  ],
+  [
+   0.453,
+   4.941,
+   11.048
+  ],
+  [
+   -5.461,
+   4.941,
+   4.0
+  ],
+  [
+   4.78,
+   4.941,
+   4.0
+  ],
+  [
+   4.78,
+   -7.356,
+   4.0
+  ],
+  [
+   -20.017,
+   -7.356,
+   4.0
+  ],
+  [
+   -20.017,
+   4.941,
+   4.0
+  ],
+  [
+   -20.017,
+   4.941,
+   7.803
+  ],
+  [
+   -20.017,
+   -7.356,
+   7.803
+  ],
+  [
+   4.78,
+   -7.356,
+   7.803
+  ],
+  [
+   4.78,
+   4.941,
+   7.803
+  ]
+ ]
+}

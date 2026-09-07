@@ -1,0 +1,22 @@
+{
+ "id": "26JHatoHX8uPohez7UDUgn",
+ "name": "1",
+ "status": "ok",
+ "v_src_m3": "372.279581",
+ "v_out_m3": "372.279581",
+ "dv_m3": "0.0",
+ "dv_pct": "0.0",
+ "v_naive_stored_units": "3.026097673133049e-08",
+ "v_proj_m3": "369.858029",
+ "dv_proj_pct": "-0.650466",
+ "proj_disp_mm": "43.755",
+ "max_vertex_disp_mm": "0.0",
+ "src_tris": "12",
+ "out_tris": "12",
+ "src_verts": "8",
+ "out_verts": "8",
+ "src_watertight": "True",
+ "src_unpaired_edges": "0",
+ "out_watertight": "True",
+ "out_unpaired_edges": "0"
+}

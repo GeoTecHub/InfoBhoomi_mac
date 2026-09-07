@@ -1,0 +1,35 @@
+# --- dependencies / virtualenvs (never commit) ---
+node_modules/
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.so
+
+# --- secrets ---
+.env
+.env.*
+*.pem
+*.key
+
+# --- nested working copies (these have their own .git) ---
+3D-Cadastre/
+InfoBhoomi_Backend_dev2/
+infoBhoomi-frontedend-div2/
+
+# --- large binaries / data dumps ---
+*.mp4
+*.dump
+*.sql
+*.zip
+*.ifc
+
+# --- os / editor ---
+.DS_Store
+.vscode/
+*.swp
+
+# --- generated ---
+dist/
+build/
+.angular/

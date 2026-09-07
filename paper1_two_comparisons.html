@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Two comparisons — Paper 1</title>
+<style>
+  body { margin:0; background:#f7f7f5; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+  svg { display:block; width:100%; height:auto; }
+</style>
+</head>
+<body>
+<svg viewBox="0 0 1100 1010" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155"/>
+    </marker>
+    <marker id="arT" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0d7a6f"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b45309"/>
+    </marker>
+  </defs>
+
+  <rect width="1100" height="1010" fill="#f7f7f5"/>
+
+  <!-- ============ TITLE ============ -->
+  <text x="50" y="52" font-size="25" font-weight="700" fill="#0f172a">Two different comparisons — only one measures encoding loss</text>
+  <text x="50" y="78" font-size="15" fill="#475569">Paper 1 · IFC → CityJSON → PostGIS</text>
+
+  <!-- ============ PANEL A ============ -->
+  <rect x="40" y="104" width="1020" height="286" rx="10" fill="#ffffff" stroke="#d9dde3"/>
+  <rect x="40" y="104" width="6" height="286" rx="3" fill="#0d7a6f"/>
+  <text x="66" y="136" font-size="13" font-weight="700" fill="#0d7a6f" letter-spacing="1.1">THE MEASUREMENT — ENCODING LOSS</text>
+  <text x="66" y="160" font-size="14.5" fill="#334155">One volume, encoded four ways. Compare it against itself.</text>
+
+  <!-- stage boxes -->
+  <g font-size="14.5" fill="#0f172a">
+    <rect x="66"  y="182" width="182" height="60" rx="7" fill="#eef4f3" stroke="#0d7a6f"/>
+    <text x="157" y="207" text-anchor="middle" font-weight="700">S0 · IFC</text>
+    <text x="157" y="228" text-anchor="middle" font-size="12.5" fill="#475569">architect's model</text>
+
+    <rect x="304" y="182" width="182" height="60" rx="7" fill="#eef4f3" stroke="#0d7a6f"/>
+    <text x="395" y="207" text-anchor="middle" font-weight="700">S1 · CityJSON</text>
+    <text x="395" y="228" text-anchor="middle" font-size="12.5" fill="#475569">after conversion</text>
+
+    <rect x="542" y="182" width="182" height="60" rx="7" fill="#eef4f3" stroke="#0d7a6f"/>
+    <text x="633" y="207" text-anchor="middle" font-weight="700">S2 · PostGIS</text>
+    <text x="633" y="228" text-anchor="middle" font-size="12.5" fill="#475569">as stored</text>
+
+    <rect x="780" y="182" width="182" height="60" rx="7" fill="#eef4f3" stroke="#0d7a6f"/>
+    <text x="871" y="207" text-anchor="middle" font-weight="700">S3 · CityJSON′</text>
+    <text x="871" y="228" text-anchor="middle" font-size="12.5" fill="#475569">rebuilt from DB</text>
+  </g>
+  <line x1="252" y1="212" x2="298" y2="212" stroke="#334155" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="490" y1="212" x2="536" y2="212" stroke="#334155" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="728" y1="212" x2="774" y2="212" stroke="#334155" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <!-- comparison brackets -->
+  <g stroke="#0d7a6f" stroke-width="1.6" fill="none">
+    <path d="M157 250 L157 268 L395 268 L395 250"/>
+    <path d="M395 286 L395 300 L633 300 L633 286"/>
+    <path d="M633 250 L633 268 L871 268 L871 250"/>
+    <path d="M157 318 L157 344 L871 344 L871 318"/>
+  </g>
+  <g font-size="12.5" fill="#0d7a6f" text-anchor="middle" font-weight="600">
+    <text x="276" y="283">Δ tessellation + georeferencing</text>
+    <text x="514" y="315">Δ storage encoding</text>
+    <text x="752" y="283">Δ reconstruction</text>
+    <text x="514" y="362">end-to-end survival</text>
+  </g>
+  <text x="66" y="378" font-size="13.5" fill="#334155">Same survey, same convention, same building — <tspan font-weight="700">the encoding is the only thing that changed</tspan>, so the difference is attributable.</text>
+
+  <!-- ============ PANEL B ============ -->
+  <rect x="40" y="412" width="1020" height="272" rx="10" fill="#ffffff" stroke="#d9dde3"/>
+  <rect x="40" y="412" width="6" height="272" rx="3" fill="#b45309"/>
+  <text x="66" y="444" font-size="13" font-weight="700" fill="#b45309" letter-spacing="1.1">THE TRAP — DEED AREA vs DATABASE AREA</text>
+  <text x="66" y="468" font-size="14.5" fill="#334155">One number, four independent causes. Nothing is attributable.</text>
+
+  <!-- stacked bar -->
+  <g>
+    <rect x="66"  y="492" width="196" height="52" fill="#e2e8f0" stroke="#94a3b8"/>
+    <rect x="262" y="492" width="286" height="52" fill="#e2e8f0" stroke="#94a3b8"/>
+    <rect x="548" y="492" width="238" height="52" fill="#e2e8f0" stroke="#94a3b8"/>
+    <rect x="786" y="492" width="112" height="52" fill="#fcd9a4" stroke="#b45309" stroke-width="2"/>
+    <text x="164" y="523" text-anchor="middle" font-size="12.5" fill="#334155">surveyor's error</text>
+    <text x="405" y="523" text-anchor="middle" font-size="12.5" fill="#334155">area convention</text>
+    <text x="667" y="523" text-anchor="middle" font-size="12.5" fill="#334155">model vs as-built</text>
+    <text x="842" y="517" text-anchor="middle" font-size="12" font-weight="700" fill="#7c2d12">encoding</text>
+    <text x="842" y="533" text-anchor="middle" font-size="12" font-weight="700" fill="#7c2d12">loss</text>
+  </g>
+  <line x1="66" y1="562" x2="898" y2="562" stroke="#94a3b8" stroke-width="1.3"/>
+  <line x1="66" y1="556" x2="66" y2="568" stroke="#94a3b8" stroke-width="1.3"/>
+  <line x1="898" y1="556" x2="898" y2="568" stroke="#94a3b8" stroke-width="1.3"/>
+  <text x="482" y="583" text-anchor="middle" font-size="13" fill="#475569">what “deed area − database area” actually gives you</text>
+
+  <path d="M842 620 L842 556" stroke="#b45309" stroke-width="1.8" fill="none" marker-end="url(#arR)"/>
+  <text x="842" y="643" text-anchor="middle" font-size="13.5" font-weight="700" fill="#b45309">…but this sliver is the only part you are studying</text>
+  <text x="66" y="672" font-size="13.5" fill="#334155">A 2 m² discrepancy tells you nothing about the pipeline. It may be entirely convention, and often is.</text>
+
+  <!-- ============ PANEL C ============ -->
+  <rect x="40" y="706" width="1020" height="238" rx="10" fill="#ffffff" stroke="#d9dde3"/>
+  <rect x="40" y="706" width="6" height="238" rx="3" fill="#1d4ed8"/>
+  <text x="66" y="738" font-size="13" font-weight="700" fill="#1d4ed8" letter-spacing="1.1">WHAT THE DEED IS ACTUALLY FOR — THE MATERIALITY RULER</text>
+  <text x="66" y="762" font-size="14.5" fill="#334155">Registered figures set the threshold. They are not the thing you difference against.</text>
+
+  <line x1="120" y1="838" x2="900" y2="838" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="120" y1="830" x2="120" y2="846" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="120" y="866" text-anchor="middle" font-size="12.5" fill="#64748b">0</text>
+
+  <line x1="640" y1="806" x2="640" y2="870" stroke="#1d4ed8" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="652" y="800" font-size="13" font-weight="700" fill="#1d4ed8">threshold that changes a registered number</text>
+  <text x="652" y="884" font-size="12.5" fill="#475569">area rounding · share fraction · overlap test flips</text>
+
+  <line x1="120" y1="818" x2="360" y2="818" stroke="#0d7a6f" stroke-width="7" stroke-linecap="round"/>
+  <text x="370" y="823" font-size="13" fill="#0f172a">encoding error 0.3 m² → <tspan font-weight="700" fill="#0d7a6f">not material</tspan></text>
+
+  <line x1="120" y1="912" x2="742" y2="912" stroke="#b45309" stroke-width="7" stroke-linecap="round"/>
+  <text x="752" y="917" font-size="13" fill="#0f172a">1.4 m² → <tspan font-weight="700" fill="#b45309">material</tspan></text>
+
+  <!-- ============ TAKEAWAY ============ -->
+  <text x="50" y="982" font-size="15" fill="#0f172a">
+    <tspan font-weight="700">In one line:</tspan> the deed is how you argue the error <tspan font-style="italic">matters</tspan> — it is not how you <tspan font-style="italic">measure</tspan> the error.
+  </text>
+</svg>
+</body>
+</html>
