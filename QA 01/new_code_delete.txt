@@ -1,0 +1,107 @@
+class Survey_Rep_DATA_BulkDelete_id_View(APIView):
+    http_method_names = ['delete']
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
+
+    def delete_related(self, su_id):
+        """Delete one record and its related data"""
+        total_deleted = 0
+        parent_ids = []
+
+        try:
+            record = Survey_Rep_DATA_Model.objects.get(id=su_id)
+            parent_ids = record.parent_id or []
+
+            # Delete spatial unit
+            total_deleted += LA_Spatial_Unit_Model.objects.filter(su_id=su_id).delete()[0]
+
+            # Delete ref children
+            ref_ids = list(
+                Survey_Rep_DATA_Model.objects.filter(ref_id=su_id)
+                .values_list("id", flat=True)
+            )
+
+            total_deleted += Survey_Rep_DATA_Model.objects.filter(ref_id=su_id).delete()[0]
+            total_deleted += LA_Spatial_Unit_Model.objects.filter(su_id__in=ref_ids).delete()[0]
+
+            # Delete main record
+            record.delete()
+            total_deleted += 1
+
+        except Survey_Rep_DATA_Model.DoesNotExist:
+            pass
+
+        return total_deleted, parent_ids
+
+    def delete(self, request):
+        su_ids = request.data.get('ids', [])
+
+        if not isinstance(su_ids, list) or not su_ids:
+            return Response(
+                {"error": "Provide a list of ids"},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        # 🔐 Permission check
+        user = request.user
+        user_roles = User_Roles_Model.objects.filter(users__contains=[user.id])
+
+        if not user_roles.exists():
+            return Response({"error": "No roles assigned"}, status=403)
+
+        role_id = user_roles.values_list('role_id', flat=True).first()
+
+        has_permission = Role_Permission_Model.objects.filter(
+            role_id=role_id,
+            permission_id=201,
+            delete=True
+        ).exists()
+
+        if not has_permission:
+            return Response({"error": "No delete permission"}, status=403)
+
+        total_deleted = 0
+        deleted_ids = set()
+        parent_ids_to_update = set()
+
+        with transaction.atomic():
+            for su_id in su_ids:
+
+                if su_id in deleted_ids:
+                    continue
+
+                # Delete main record
+                deleted, parent_ids = self.delete_related(su_id)
+                total_deleted += deleted
+                deleted_ids.add(su_id)
+
+                # Handle siblings
+                if len(parent_ids) == 1:
+                    parent_id = parent_ids[0]
+
+                    sibling_ids = list(
+                        Survey_Rep_DATA_Model.objects.filter(parent_id__contains=[parent_id])
+                        .exclude(id__in=deleted_ids)
+                        .values_list('id', flat=True)
+                    )
+
+                    for sib_id in sibling_ids:
+                        d, _ = self.delete_related(sib_id)
+                        total_deleted += d
+                        deleted_ids.add(sib_id)
+
+                    parent_ids_to_update.add(parent_id)
+
+                elif len(parent_ids) > 1:
+                    parent_ids_to_update.update(parent_ids)
+
+            # Restore parent status
+            if parent_ids_to_update:
+                Survey_Rep_DATA_Model.objects.filter(
+                    id__in=parent_ids_to_update
+                ).update(status=True)
+
+        return Response(
+            {"message": f"{total_deleted} record(s) deleted successfully"},
+            status=status.HTTP_200_OK
+        )

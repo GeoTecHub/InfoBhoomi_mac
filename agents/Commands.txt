@@ -1,0 +1,17 @@
+# Performance test only (no Anthropic API key needed)
+python orchestrator.py --perf-only
+
+# Full run (perf + AI research + change approval)
+python orchestrator.py
+
+# Resume a previous session
+python orchestrator.py --resume
+
+# Go straight to approving pending changes
+python orchestrator.py --approve
+
+# Show pending changes without doing anything
+python orchestrator.py --show
+
+# Start completely fresh
+python orchestrator.py --clear

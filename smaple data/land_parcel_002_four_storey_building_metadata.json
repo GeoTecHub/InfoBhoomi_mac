@@ -1,0 +1,102 @@
+{
+  "parcel_id": "12506",
+  "building_name": "Parcel 002 Four Storey Test Building",
+  "schema": "IFC4",
+  "generated_at": "2026-06-03T14:58:39.626701+00:00",
+  "wgs84_origin": {
+    "latitude": 6.81448,
+    "longitude": 81.00171,
+    "height_m": 10.0
+  },
+  "local_coordinate_system": {
+    "unit": "metre",
+    "axis": "east-north-up",
+    "origin": "WGS84 coordinate reference point supplied during generation"
+  },
+  "building": {
+    "storeys": 4,
+    "units_per_storey": 3,
+    "storey_height_m": 3.2,
+    "space_height_m": 3.0,
+    "local_origin_m": {
+      "east": 16.0,
+      "north": 16.0,
+      "height": 0.05
+    },
+    "footprint_m": {
+      "width": 26.0,
+      "length": 20.0
+    },
+    "footprint_vertices": [
+      {
+        "local_m": {
+          "east": 16.0,
+          "north": 16.0,
+          "height": 10.0
+        },
+        "wgs84": {
+          "latitude": 6.8146247,
+          "longitude": 81.00185475,
+          "height_m": 10.0
+        }
+      },
+      {
+        "local_m": {
+          "east": 42.0,
+          "north": 16.0,
+          "height": 10.0
+        },
+        "wgs84": {
+          "latitude": 6.8146247,
+          "longitude": 81.00208998,
+          "height_m": 10.0
+        }
+      },
+      {
+        "local_m": {
+          "east": 42.0,
+          "north": 36.0,
+          "height": 10.0
+        },
+        "wgs84": {
+          "latitude": 6.81480557,
+          "longitude": 81.00208998,
+          "height_m": 10.0
+        }
+      },
+      {
+        "local_m": {
+          "east": 16.0,
+          "north": 36.0,
+          "height": 10.0
+        },
+        "wgs84": {
+          "latitude": 6.81480557,
+          "longitude": 81.00185475,
+          "height_m": 10.0
+        }
+      },
+      {
+        "local_m": {
+          "east": 16.0,
+          "north": 16.0,
+          "height": 10.0
+        },
+        "wgs84": {
+          "latitude": 6.8146247,
+          "longitude": 81.00185475,
+          "height_m": 10.0
+        }
+      }
+    ]
+  },
+  "contents": {
+    "ifc_site": 1,
+    "ifc_geographic_element_land_parcel": 0,
+    "ifc_building": 1,
+    "ifc_building_storey": 4,
+    "ifc_space_units": 12,
+    "ifc_slabs": 4,
+    "ifc_walls": 16
+  }
+}

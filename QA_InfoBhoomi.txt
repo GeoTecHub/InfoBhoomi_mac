@@ -1,0 +1,60 @@
+commands:  $env:VIRTUAL_ENV="venv"; venv\Scripts\python.exe manage.py runserver
+
+password for the backend : POST@info#box2024
+
+  ┌──────────┬─────────────────────────┐
+  │  Field   │          Value          │
+  ├──────────┼─────────────────────────┤
+  │ Username │ test.user               │
+  ├──────────┼─────────────────────────┤
+  │ Password │ Test@1234               │
+  ├──────────┼─────────────────────────┤
+  │ Email    │ test.user@infobhoomi.lk │
+  ├──────────┼─────────────────────────┤
+  │ Role     │ super_admin  
+
+commands:\
+
+PS C:\InfoBhoomi\InfoBhoomi_Backend_dev2> myenv\Scripts\Activate.ps1^C
+PS C:\InfoBhoomi\InfoBhoomi_Backend_dev2> & c:\InfoBhoomi\InfoBhoomi_Backend_dev2\venv\Scripts\Activate.ps1
+
+python manage.py shell
+list(LA_LS_Land_Unit_Model.objects.exclude(land_name__isnull=True).exclude(land_name='').values('su_id_id', 'land_name','registration_date')[:20])
+
+  Tip: Working with HTML/CSS? Add the frontend-design plugin:
+     /plugin marketplace add anthropics/claude-code
+     /plugin install frontend-design@claude-code-plugins
+
+
+
+LA_LS_land Unit/ 
+area = models.DecimalField(max_digits=15, decimal_places=4, null=True) # need to check -925
+area = models.DecimalField(max_digits=20, decimal_places=4, null=True) # need to check 557
+why userId being their 
+
+class LA_LS_Utinet_LU_Model(models.Model):
+ 
+
+   995 - status = models.BooleanField(null=False, default=True) # showing false in the database need to be true
+
+    class Meta:
+            managed = True
+            db_table = 'la_ls_utinet_lu'
+
+class Assessment_Model(models.Model):
+
+user_id has been created in the database
+
+  So the priority chain is:
+
+  la_ls_land_unit.area  (legal)       ← shown if not null
+         ↓ (null)
+  survey_rep.area  (stored geometry)  ← shown if not null/0
+         ↓ (null/0)
+  OL getArea() computed live          ← last resort
+
+  If no legal area is saved, the spatial section shows the geometric area from survey_rep (what was saved when the geometry was drawn/imported). If that's also missing, it computes live from the drawn polygon
+  on the map.
+
+-> Data sequence should be updated 
+ LayersModel(models.Model):

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>InfoBhoomi — Parcel History Report tab (mockup)</title>
+<style>
+  :root{
+    --bg:#f4f3ee; --surface:#ffffff; --surface2:#f1efe8;
+    --text:#2c2c2a; --muted:#5f5e5a; --hint:#888780;
+    --border:rgba(0,0,0,.15); --border2:rgba(0,0,0,.3); --info:#185FA5; --danger:#791F1F;
+    --r-md:8px; --r-lg:12px;
+    --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--bg); font-family:var(--font); color:var(--text); padding:28px;}
+  .dialog{max-width:680px; margin:0 auto; background:var(--surface2); border-radius:var(--r-lg); padding:16px;}
+  button{height:36px; border:0.5px solid var(--border2); background:transparent; border-radius:var(--r-md); padding:0 14px; font-size:13px; cursor:pointer;}
+  button:hover{background:var(--surface2);}
+  table{width:100%; border-collapse:collapse;}
+  h2.note{font-size:13px; color:var(--muted); font-weight:400; max-width:680px; margin:0 auto 16px;}
+  .ti{display:inline-block; width:1em; text-align:center;}
+</style>
+</head>
+<body>
+<h2 class="note">Mockup — InfoBhoomi parcel history dialog, Report tab. For review/feedback only; sample data shown.</h2>
+<div class="dialog">
+
+  <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;">
+    <span style="font-size:16px; font-weight:500;">⟲ Parcel history</span>
+    <span style="color:var(--hint)">✕</span>
+  </div>
+
+  <div style="display:flex; gap:8px; margin-bottom:14px;">
+    <div style="flex:1; display:flex; align-items:center; gap:8px; background:var(--surface); border:0.5px solid var(--border2); border-radius:var(--r-md); padding:0 10px; height:36px;">
+      <span style="color:var(--hint)">🔍</span>
+      <span style="font-size:13px; color:var(--muted)">Search deleted parcel by su_id or label…</span>
+    </div>
+    <button>Find</button>
+  </div>
+
+  <div style="background:var(--surface); border:0.5px solid var(--border); border-radius:var(--r-md); padding:8px 10px; margin-bottom:14px; display:flex; align-items:center; justify-content:space-between;">
+    <div>
+      <span style="font-size:14px; font-weight:500;">LP-12506 · Liyangahawela Lot 7</span>
+      <span style="font-size:12px; color:var(--muted); margin-left:8px;">su_id 12506</span>
+    </div>
+    <span style="background:#FCEBEB; color:var(--danger); font-size:12px; padding:3px 10px; border-radius:var(--r-md);">Deleted · not on map</span>
+  </div>
+
+  <div style="display:flex; gap:18px; border-bottom:0.5px solid var(--border); margin-bottom:14px; font-size:13px;">
+    <span style="padding-bottom:8px; color:var(--hint)">Geometry (3)</span>
+    <span style="padding-bottom:8px; color:var(--hint)">Attributes (4)</span>
+    <span style="padding-bottom:8px; color:var(--hint)">RRR (2)</span>
+    <span style="padding-bottom:8px; color:var(--hint)">Relationships (5)</span>
+    <span style="padding-bottom:8px; color:var(--text); font-weight:500; border-bottom:2px solid var(--info)">Report</span>
+  </div>
+
+  <div style="font-size:13px; color:var(--muted); margin-bottom:12px;">Generated 6 Jun 2026, 14:20 · by Milinda</div>
+
+  <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-bottom:18px;">
+    <div style="background:var(--surface2); border-radius:var(--r-md); padding:12px;"><div style="font-size:13px; color:var(--muted)">Attribute changes</div><div style="font-size:24px; font-weight:500;">4</div></div>
+    <div style="background:var(--surface2); border-radius:var(--r-md); padding:12px;"><div style="font-size:13px; color:var(--muted)">Geometry changes</div><div style="font-size:24px; font-weight:500;">3</div></div>
+    <div style="background:var(--surface2); border-radius:var(--r-md); padding:12px;"><div style="font-size:13px; color:var(--muted)">RRR events</div><div style="font-size:24px; font-weight:500;">2</div></div>
+    <div style="background:var(--surface2); border-radius:var(--r-md); padding:12px;"><div style="font-size:13px; color:var(--muted)">Legal spaces removed</div><div style="font-size:24px; font-weight:500; color:var(--danger);">3</div></div>
+  </div>
+
+  <div style="font-size:14px; font-weight:500; margin-bottom:10px;">⏱ Lifecycle timeline</div>
+  <div style="border-left:2px solid var(--border2); margin-left:6px; padding-left:14px; margin-bottom:20px;">
+    <div style="margin-bottom:12px;"><div style="font-size:13px; font-weight:500;">Created</div><div style="font-size:12px; color:var(--muted)">12 Jan 2024 · parcel registered, area 1,240 m²</div></div>
+    <div style="margin-bottom:12px;"><div style="font-size:13px; font-weight:500;">Attribute edit</div><div style="font-size:12px; color:var(--muted)">3 Mar 2025 · land use Residential → Mixed</div></div>
+    <div style="margin-bottom:12px;"><div style="font-size:13px; font-weight:500;">Split from parent LP-12500</div><div style="font-size:12px; color:var(--muted)">9 Aug 2025 · new shape 1,180 m²</div></div>
+    <div style="margin-bottom:12px;"><div style="font-size:13px; font-weight:500;">Building added (right-click)</div><div style="font-size:12px; color:var(--muted)">14 Sep 2025 · BLD-12507 with 2 units</div></div>
+    <div><div style="font-size:13px; font-weight:500; color:var(--danger);">Deleted</div><div style="font-size:12px; color:var(--muted)">6 Jun 2026 · parcel + 3 legal spaces removed, 2 rights terminated</div></div>
+  </div>
+
+  <div style="font-size:14px; font-weight:500; margin-bottom:10px;">🏢 Legal spaces removed with this parcel</div>
+  <div style="background:var(--surface); border:0.5px solid var(--border); border-radius:var(--r-md); overflow:hidden; margin-bottom:8px;">
+    <table style="font-size:13px;">
+      <tr style="color:var(--muted); font-size:12px;"><td style="padding:8px 10px;">Type</td><td style="padding:8px 10px;">su_id</td><td style="padding:8px 10px;">Label</td><td style="padding:8px 10px;">Status</td></tr>
+      <tr style="border-top:0.5px solid var(--border)"><td style="padding:8px 10px;">Building</td><td style="padding:8px 10px;">12507</td><td style="padding:8px 10px;">BLD-12507</td><td style="padding:8px 10px; color:var(--danger);">Terminated</td></tr>
+      <tr style="border-top:0.5px solid var(--border)"><td style="padding:8px 10px;">Strata unit</td><td style="padding:8px 10px;">12508</td><td style="padding:8px 10px;">Unit 3A</td><td style="padding:8px 10px; color:var(--danger);">Terminated</td></tr>
+      <tr style="border-top:0.5px solid var(--border)"><td style="padding:8px 10px;">Strata unit</td><td style="padding:8px 10px;">12509</td><td style="padding:8px 10px;">Unit 3B</td><td style="padding:8px 10px; color:var(--danger);">Terminated</td></tr>
+    </table>
+  </div>
+  <div style="font-size:12px; color:var(--muted); margin-bottom:20px;">⊘ Rights voided: Title T-9921 (BLD-12507), Mortgage M-4410 (Unit 3A) — status set inactive.</div>
+
+  <div style="font-size:14px; font-weight:500; margin-bottom:10px;">▱ Shape lineage — previous shapes of parents &amp; children</div>
+  <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:10px;">
+    <div style="background:var(--surface); border:0.5px solid var(--border); border-radius:var(--r-md); padding:10px; text-align:center;">
+      <svg viewBox="0 0 100 80" width="100%" height="70"><polygon points="10,15 90,10 85,70 15,65" fill="#E6F1FB" stroke="#185FA5" stroke-width="2"/></svg>
+      <div style="font-size:12px; font-weight:500; margin-top:4px;">Parent · LP-12500</div>
+      <div style="font-size:11px; color:var(--muted)">before split · 12 Jan 2024 · 2,420 m²</div>
+    </div>
+    <div style="background:var(--surface); border:0.5px solid var(--border); border-radius:var(--r-md); padding:10px; text-align:center;">
+      <svg viewBox="0 0 100 80" width="100%" height="70"><polygon points="12,12 88,18 80,68 18,60" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="2"/></svg>
+      <div style="font-size:12px; font-weight:500; margin-top:4px;">This parcel · LP-12506</div>
+      <div style="font-size:11px; color:var(--muted)">at registration · 1,240 m²</div>
+    </div>
+    <div style="background:var(--surface); border:0.5px solid var(--border); border-radius:var(--r-md); padding:10px; text-align:center;">
+      <svg viewBox="0 0 100 80" width="100%" height="70"><polygon points="15,18 82,14 78,66 20,62" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="2"/></svg>
+      <div style="font-size:12px; font-weight:500; margin-top:4px;">This parcel · LP-12506</div>
+      <div style="font-size:11px; color:var(--muted)">after split · 9 Aug 2025 · 1,180 m²</div>
+    </div>
+    <div style="background:var(--surface); border:0.5px solid var(--border); border-radius:var(--r-md); padding:10px; text-align:center;">
+      <svg viewBox="0 0 100 80" width="100%" height="70"><polygon points="30,25 70,25 70,58 30,58" fill="#E1F5EE" stroke="#0F6E56" stroke-width="2"/></svg>
+      <div style="font-size:12px; font-weight:500; margin-top:4px;">Child · BLD-12507</div>
+      <div style="font-size:11px; color:var(--muted)">footprint · 14 Sep 2025 · 320 m²</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

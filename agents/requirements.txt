@@ -1,0 +1,6 @@
+# InfoBhoomi Agent System — Python dependencies
+anthropic>=0.40.0
+requests>=2.32.0
+python-dotenv>=1.0.0
+psycopg2-binary>=2.9.9
+ifcopenshell>=0.8.5

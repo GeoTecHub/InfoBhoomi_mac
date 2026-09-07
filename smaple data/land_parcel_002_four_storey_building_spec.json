@@ -1,0 +1,17 @@
+{
+  "parcel_id": "12506",
+  "building_name": "Parcel 002 Four Storey Test Building",
+  "output_name": "land_parcel_002_four_storey_building",
+  "output_dir": "smaple data",
+  "origin_latitude": 6.81448,
+  "origin_longitude": 81.00171,
+  "origin_height_m": 10.0,
+  "building_width_m": 26.0,
+  "building_length_m": 20.0,
+  "building_offset_east_m": 16.0,
+  "building_offset_north_m": 16.0,
+  "storeys": 4,
+  "units_per_storey": 3,
+  "storey_height_m": 3.2,
+  "space_height_m": 3.0
+}

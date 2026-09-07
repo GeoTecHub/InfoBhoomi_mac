@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Productivity Dashboard</title>
+<style>
+  body { font-family: Segoe UI, Arial, sans-serif; background: #faf9f5; color: #141413; padding: 24px; margin: 0; }
+  h1 { font-size: 20px; margin-bottom: 16px; color: #D97757; }
+  .board { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .col { background: #fff; border: 1px solid #e5e4df; border-radius: 8px; padding: 16px; min-height: 300px; }
+  .col h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; color: #8c8c8a; margin-bottom: 12px; }
+  .task { background: #faf9f5; border: 1px solid #e5e4df; border-radius: 6px; padding: 10px 12px; margin-bottom: 8px; font-size: 14px; }
+  .done .task { text-decoration: line-through; opacity: 0.5; }
+  button { background: #D97757; color: #fff; border: none; border-radius: 6px; padding: 8px 16px; cursor: pointer; font-size: 14px; margin-bottom: 20px; }
+  button:hover { background: #c4684a; }
+  #status { font-size: 13px; color: #8c8c8a; margin-bottom: 16px; }
+</style>
+</head>
+<body>
+<h1>Productivity Dashboard</h1>
+<button onclick="document.getElementById('fp').click()">Select TASKS.md</button>
+<input id="fp" type="file" accept=".md" style="display:none" onchange="loadFile(event)">
+<div id="status">No file loaded — click above to select your TASKS.md</div>
+<div class="board" id="board"></div>
+<script>
+function loadFile(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  document.getElementById('status').textContent = 'Loaded: ' + file.name;
+  const reader = new FileReader();
+  reader.onload = function(ev) { renderTasks(ev.target.result); };
+  reader.readAsText(file);
+}
+function renderTasks(md) {
+  const sections = ['Active','Waiting On','Someday','Done'];
+  const cols = {};
+  let current = null;
+  md.split('\n').forEach(line => {
+    const h = line.match(/^##\s+(.+)/);
+    if (h && sections.includes(h[1].trim())) { current = h[1].trim(); cols[current] = []; return; }
+    if (current && line.match(/^- \[/)) cols[current].push(line.replace(/^- \[.\]\s*/, '').replace(/\*\*/g,''));
+  });
+  const board = document.getElementById('board');
+  board.innerHTML = '';
+  sections.forEach(s => {
+    const tasks = cols[s] || [];
+    board.innerHTML += '<div class="col' + (s==='Done'?' done':'') + '"><h2>' + s + ' (' + tasks.length + ')</h2>' +
+      (tasks.length ? tasks.map(t => '<div class="task">' + t + '</div>').join('') : '<div style="color:#8c8c8a;font-size:13px">Empty</div>') + '</div>';
+  });
+}
+</script>
+</body>
+</html>

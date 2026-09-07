@@ -1,0 +1,10 @@
+# Credentials — never commit these
+.env
+
+# Agent runtime state
+.agent_state/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
