@@ -107,31 +107,43 @@ def main() -> int:
         model = args.model or path.stem
         rows = read_rows(path)
 
-        # drop any existing rows for this model+condition
-        kill = [r for r in range(FIRST_DATA_ROW, ws.max_row + 1)
-                if ws.cell(r, c_model).value == model
-                and ws.cell(r, c_cond).value == args.condition]
         # only the columns this script owns — never the formula columns
         owned = [c_model, c_cond, c_run] + [col[v] for v in MAP.values()]
-        for r in kill:
-            for c in owned:
-                ws.cell(r, c).value = None
 
-        # first free row
-        target = FIRST_DATA_ROW
-        while ws.cell(target, c_model).value not in (None, ""):
-            target += 1
+        # Read the whole owned block out, drop this model+condition, and write it
+        # back contiguously. Blanking rows in place and then filling from the
+        # first free row leaves a hole: once the new block is shorter than the
+        # old one, writing runs straight over the next model's rows and they
+        # vanish without a word. Rebuild instead of patch.
+        keep, kill = [], 0
+        for r in range(FIRST_DATA_ROW, ws.max_row + 1):
+            mv = ws.cell(r, c_model).value
+            if mv in (None, ""):
+                continue
+            if mv == model and ws.cell(r, c_cond).value == args.condition:
+                kill += 1
+                continue
+            keep.append({c: ws.cell(r, c).value for c in owned})
 
         for rec in rows:
-            ws.cell(target, c_model).value = model
-            ws.cell(target, c_cond).value = args.condition
+            block = {c_model: model, c_cond: args.condition}
             if args.run:
-                ws.cell(target, c_run).value = args.run
+                block[c_run] = args.run
             for src, dst in MAP.items():
                 if src in rec:
-                    ws.cell(target, col[dst]).value = clean(src, rec[src])
-            target += 1
+                    block[col[dst]] = clean(src, rec[src])
+            keep.append(block)
             written += 1
+
+        target = FIRST_DATA_ROW
+        for block in keep:
+            for c in owned:
+                ws.cell(target, c).value = block.get(c)
+            target += 1
+        # clear whatever the old, longer block left behind
+        for r in range(target, ws.max_row + 1):
+            for c in owned:
+                ws.cell(r, c).value = None
 
         print(f"{path.name:34s} -> {model} / {args.condition}   "
               f"{len(rows)} rows"

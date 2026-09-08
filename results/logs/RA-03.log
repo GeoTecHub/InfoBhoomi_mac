@@ -1,0 +1,18 @@
+{
+ "file": "AC20-Institute-Var-2.ifc",
+ "size_mb": 10.43,
+ "load_seconds": 0.3,
+ "geometry_seconds": 0.1,
+ "spaces_total": 82,
+ "spaces_measured": 82,
+ "spaces_no_geometry": 0,
+ "src_watertight_count": 82,
+ "out_watertight_count": 82,
+ "vertices_lost_total": 0,
+ "max_vertex_disp_mm": 0.0,
+ "median_abs_dv_proj_pct": 0.652252,
+ "max_abs_dv_proj_pct": 0.652261,
+ "max_proj_disp_mm": 54.572,
+ "median_abs_dv_pct": 0.0,
+ "max_abs_dv_pct": 0.0
+}

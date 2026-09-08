@@ -1,0 +1,7 @@
+file,n_space,n_with_body,n_without_body,pct_with_body,representations,body_item_types
+AC-20-Smiley-West-10-Bldg.ifc,140,140,0,100.0,Body=140;Box=140;FootPrint=140,IfcFacetedBrep=140
+AC20-FZK-Haus.ifc,7,7,0,100.0,Body=7;Box=7;FootPrint=7,IfcFacetedBrep=7
+AC20-Institute-Var-2.ifc,82,82,0,100.0,Body=82;Box=82;FootPrint=82,IfcFacetedBrep=82
+Duplex_Architecture_IFC2x3.ifc,21,21,0,100.0,Body=21,IfcExtrudedAreaSolid=19;IfcFaceBasedSurfaceModel=2
+SampleHouse_IFC4.ifc,4,4,0,100.0,Body=4,IfcExtrudedAreaSolid=4
+Schependomlaan.ifc,100,6,94,6.0,Box=100;FootPrint=94;Body=6,IfcExtrudedAreaSolid=6

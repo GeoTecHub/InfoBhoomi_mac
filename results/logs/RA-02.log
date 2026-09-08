@@ -1,0 +1,18 @@
+{
+ "file": "Schependomlaan.ifc",
+ "size_mb": 47.0,
+ "load_seconds": 1.6,
+ "geometry_seconds": 0.0,
+ "spaces_total": 100,
+ "spaces_measured": 6,
+ "spaces_no_geometry": 94,
+ "src_watertight_count": 6,
+ "out_watertight_count": 6,
+ "vertices_lost_total": 0,
+ "max_vertex_disp_mm": 0.0,
+ "median_abs_dv_proj_pct": 0.633339,
+ "max_abs_dv_proj_pct": 0.633342,
+ "max_proj_disp_mm": 25.184,
+ "median_abs_dv_pct": 0.0,
+ "max_abs_dv_pct": 0.0
+}

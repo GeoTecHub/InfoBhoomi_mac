@@ -1,0 +1,18 @@
+{
+ "file": "SampleHouse_IFC4.ifc",
+ "size_mb": 2.17,
+ "load_seconds": 0.1,
+ "geometry_seconds": 0.0,
+ "spaces_total": 4,
+ "spaces_measured": 4,
+ "spaces_no_geometry": 0,
+ "src_watertight_count": 4,
+ "out_watertight_count": 4,
+ "vertices_lost_total": 0,
+ "max_vertex_disp_mm": 0.0,
+ "median_abs_dv_proj_pct": 0.644549,
+ "max_abs_dv_proj_pct": 0.644551,
+ "max_proj_disp_mm": 36.319,
+ "median_abs_dv_pct": 0.0,
+ "max_abs_dv_pct": 0.0
+}
