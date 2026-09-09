@@ -240,11 +240,19 @@ def main():
 
     with open(args.out + ".json", "w") as fh:
         json.dump({"summary": summary, "units": rows}, fh, indent=1)
-    if ok:
+    # Every space gets a row, measured or not. A space the encoder could not turn
+    # into a solid is a loss, and a loss that is absent from the CSV is invisible
+    # to every downstream count. Failed rows carry their status with the
+    # measurement columns left blank — never dropped, never zero.
+    if rows:
+        fields = list(ok[0].keys()) if ok else ["id", "name", "status"]
+        for r in rows:
+            for k in fields:
+                r.setdefault(k, "")
         with open(args.out + ".csv", "w", newline="") as fh:
-            w = csv.DictWriter(fh, fieldnames=list(ok[0].keys()))
+            w = csv.DictWriter(fh, fieldnames=fields, extrasaction="ignore")
             w.writeheader()
-            w.writerows(ok)
+            w.writerows(rows)
 
     print(json.dumps(summary, indent=1))
     return 0

@@ -1,0 +1,5 @@
+id,name,status,v_src_m3,v_out_m3,dv_m3,dv_pct,v_naive_stored_units,v_proj_m3,dv_proj_pct,proj_disp_mm,max_vertex_disp_mm,src_tris,out_tris,src_verts,out_verts,src_watertight,src_unpaired_edges,out_watertight,out_unpaired_edges
+3w0zWKm7n8SB1qbfwUzt0U,1 - Living room,ok,129.987063,129.987063,0.0,0.0,1.058916377783585e-08,129.149232,-0.644549,34.731,0.0,24,24,14,14,True,0,True,0
+3w0zWKm7n8SB1qbfwUzt0J,2 - Bedroom,ok,38.541953,38.541953,0.0,0.0,3.139798611500229e-09,38.293531,-0.644551,15.741,0.0,12,12,8,8,True,0,True,0
+3w0zWKm7n8SB1qbfwUzt0G,3 - Entrance hall,ok,21.733766,21.733766,0.0,0.0,1.7706563494973627e-09,21.593682,-0.644545,10.649,0.0,12,12,8,8,True,0,True,0
+09J5N7xMHBfQZeQGAEMota,4 - Roof,ok,76.465516,76.465516,-0.0,-0.0,6.2292993842892356e-09,75.97266,-0.644546,36.319,0.0,20,20,12,12,True,0,True,0

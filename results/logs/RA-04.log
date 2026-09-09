@@ -1,0 +1,18 @@
+{
+ "file": "Duplex_Architecture_IFC2x3.ifc",
+ "size_mb": 2.27,
+ "load_seconds": 0.1,
+ "geometry_seconds": 0.0,
+ "spaces_total": 21,
+ "spaces_measured": 21,
+ "spaces_no_geometry": 0,
+ "src_watertight_count": 21,
+ "out_watertight_count": 21,
+ "vertices_lost_total": 0,
+ "max_vertex_disp_mm": 0.0,
+ "median_abs_dv_proj_pct": 0.665518,
+ "max_abs_dv_proj_pct": 0.66553,
+ "max_proj_disp_mm": 57.519,
+ "median_abs_dv_pct": 0.0,
+ "max_abs_dv_pct": 0.0
+}

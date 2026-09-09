@@ -1,8 +1,7 @@
 file,path,size_mb,schema,length_unit,entities,buildings,storeys,spaces,zones,space_boundaries,map_conversion,projected_crs,property_sets,brep,tessellated,extruded,usable,blockers,warnings
-AC-20-Smiley-West-10-Bldg.ifc,corpus/AC-20-Smiley-West-10-Bldg.ifc,5.83,IFC4,metre,110176,1,5,140,0,1689,0,0,1544,558,0,950,True,,no IfcMapConversion — manual georeferencing required
-AC20-FZK-Haus.ifc,corpus/AC20-FZK-Haus.ifc,2.45,IFC4,metre,44249,1,2,7,0,81,0,0,306,140,0,51,True,,no IfcMapConversion — manual georeferencing required
-AC20-Institute-Var-2.ifc,corpus/AC20-Institute-Var-2.ifc,10.43,IFC4,metre,147712,1,5,82,0,1000,0,0,2203,194,0,698,True,,no IfcMapConversion — manual georeferencing required
-Duplex_Architecture_IFC2x3.ifc,corpus/Duplex_Architecture_IFC2x3.ifc,2.27,IFC2X3,metre,38898,1,4,21,0,265,0,0,1459,0,0,421,True,,no IfcMapConversion — manual georeferencing required
-Revit_ARC_IFC4.ifc,corpus/Revit_ARC_IFC4.ifc,13.01,IFC4,metre,123939,1,6,0,0,0,0,0,1600,0,516,504,False,no IfcSpace — imports silently with zero legal volumes,no IfcMapConversion — manual georeferencing required; no space boundaries — party-wall semantics unavailable
-SampleHouse_IFC4.ifc,corpus/SampleHouse_IFC4.ifc,2.17,IFC4,metre,47309,1,2,4,0,0,0,0,465,108,0,55,True,,no IfcMapConversion — manual georeferencing required; no space boundaries — party-wall semantics unavailable
-Schependomlaan.ifc,corpus/Schependomlaan.ifc,47.0,IFC2X3,millimetre,714485,1,6,100,0,1675,0,0,11987,4202,0,711,True,,no IfcMapConversion — manual georeferencing required
+AC-20-Smiley-West-10-Bldg.ifc,corpus/routeA/AC-20-Smiley-West-10-Bldg.ifc,5.83,IFC4,metre,110176,1,5,140,0,1689,0,0,1544,558,0,950,True,,no IfcMapConversion — manual georeferencing required
+AC20-FZK-Haus.ifc,corpus/routeA/AC20-FZK-Haus.ifc,2.45,IFC4,metre,44249,1,2,7,0,81,0,0,306,140,0,51,True,,no IfcMapConversion — manual georeferencing required
+AC20-Institute-Var-2.ifc,corpus/routeA/AC20-Institute-Var-2.ifc,10.43,IFC4,metre,147712,1,5,82,0,1000,0,0,2203,194,0,698,True,,no IfcMapConversion — manual georeferencing required
+Duplex_Architecture_IFC2x3.ifc,corpus/routeA/Duplex_Architecture_IFC2x3.ifc,2.27,IFC2X3,metre,38898,1,4,21,0,265,0,0,1459,0,0,421,True,,no IfcMapConversion — manual georeferencing required
+SampleHouse_IFC4.ifc,corpus/routeA/SampleHouse_IFC4.ifc,2.17,IFC4,metre,47309,1,2,4,0,0,0,0,465,108,0,55,True,,no IfcMapConversion — manual georeferencing required; no space boundaries — party-wall semantics unavailable
+Schependomlaan.ifc,corpus/routeA/Schependomlaan.ifc,47.0,IFC2X3,millimetre,714485,1,6,100,0,1675,0,0,11987,4202,0,711,True,,no IfcMapConversion — manual georeferencing required
