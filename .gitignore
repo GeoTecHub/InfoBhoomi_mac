@@ -33,3 +33,12 @@ infoBhoomi-frontedend-div2/
 dist/
 build/
 .angular/
+
+# large data kept out of git
+gnd_01.csv
+*.tmp
+
+# these are source, not data — keep them
+!.env.example
+!agents/.env.example
+!agents/grant_seed_role_perms.sql
